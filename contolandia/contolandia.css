@@ -66,6 +66,14 @@ header {
     align-items: center;
 }
 
+#mobmenu {
+    display: none;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .topnav ul {
     list-style: none;
     margin-left: auto;
@@ -137,6 +145,9 @@ header {
 .dropdown:hover .ddlist {
     display: block;
 }
+.ddlm {
+    display: block;
+}
 
 
 .logo {
@@ -178,10 +189,12 @@ header {
 
 #hometxt {
     min-width: 490px;
+    order: 1;
 }
 
 #homeimg {
     max-width: 700px;
+    order: 2;
 }
 
 #undraw {
@@ -218,7 +231,7 @@ main {
 
 .section {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 30px;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
 }
@@ -230,18 +243,49 @@ main {
     color: #363449;
 }
 
-#destaques ul {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+.booklist {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px -10px;
 }
 
-#recentes ul {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 20px;
+.booklist article {
+    padding: 10px 10px;
+    display: flex;
+}
+
+.booklist a {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    background-color: #fff;
+    overflow: hidden;
+    color: #363449;
+    height: auto;    
+}
+
+.booklist a:hover {
+    border-color: #908da6;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.bldest {
+    width: 25%;
+}
+
+.blrec {
+    width: 20%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+}
+
+.rec6 {
+    display: none !important;
+}
+
+.bluni {
+    width: 33.333%;
 }
 
 #universos ul {
@@ -280,7 +324,7 @@ main {
 }
 
 .cardtxt {
-    padding: 1rem;
+    padding: 15px;
     font-size: 17px;
     line-height: 1.55rem;
 }
@@ -345,4 +389,111 @@ footer a:hover {
     display: grid;
     align-items: center;
     height: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+    #homebox {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    #hometxt {
+        order: 2;
+        text-align: center;
+    }
+    #homeimg {
+        order: 1;
+    }
+    .jstn {
+        display: flex;
+        align-items: center;
+    }
+    #la {
+        margin: auto;
+    }
+    .logo, .logoscroll {
+        width: 203px;
+        height: 25px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #mobmenu {
+        display: flex;
+        font-size: 30px;
+    }
+    .topnav ul {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        background-color: #363449;
+        box-shadow: 0 2px 10px 3px rgba(0,0,0,.1);
+        padding: 0.4rem;
+    }
+    .topnav li {
+        padding: 1rem;
+    }
+    #mobmenu a, #mobmenu a::selection {
+        color: #fff;
+    }
+    .tnscroll #mobmenu a, .tnscroll #mobmenu a::selection {
+        color: #363449;
+    }
+    .tnscroll ul a {
+        color: #fff;
+        text-decoration: none;
+    }
+    #moblinks {
+        display: none;
+    }
+    #btlogin {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    .bldest {
+        width: 50%;
+    }
+    .blrec {
+        width: 33.333%;
+    }
+    .rec6 {
+        display: block !important;
+    }
+    .bluni {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    h2 {
+        font-size: 32px;
+    }
+    .logo, .logoscroll {
+        width: 162px;
+        height: 20px;
+        background-size: auto 20px;
+    }
+    #mobmenu {
+        font-size: 24px;
+        padding: 1.4rem;
+    }
+    #hometxt {
+        min-width: 100%;
+        padding: 0;
+    }
+
+    .cardtxt {
+        font-size: 16px;
+    }
+
+    .bldest {
+        width: 100%;
+    }
+
+    .blrec {
+        width: 50%;
+    }
 }
