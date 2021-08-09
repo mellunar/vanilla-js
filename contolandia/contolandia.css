@@ -255,7 +255,7 @@ main {
 }
 
 .booklist a {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     border: 1px solid #E0E0E0;
     border-radius: 15px;
@@ -271,12 +271,10 @@ main {
 }
 
 .bldest {
-    display: block;
     width: 25%;
 }
 
 .blrec {
-    display: block;
     width: 20%;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
@@ -287,33 +285,8 @@ main {
 }
 
 .bluni {
-    display: block;
     width: 33.333%;
 }
-
-#universos ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 20px;
-}
-
-.vcards li {    
-    border: 1px solid #E0E0E0;
-    border-radius: 15px;
-    background-color: #fff;
-    overflow: hidden;
-}
-
-#universos li {
-    max-height: 230px;
-}
-
-.vcards li:hover {
-    border-color: #908da6;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-}
-
 
 .cardimgw {
     width: 100%;
