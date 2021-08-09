@@ -15,3 +15,13 @@ window.onload = function () {
         }
     };
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.mobilemenu = function mobilemenu() {
+        let o = document.getElementById("moblinks");
+        o.style.display === "flex" ? o.style.display = "none" : o.style.display = "flex"
+    }
+    window.openClose = function openClose(x) {
+        x.classList.toggle("bi-x");
+    }
+});
