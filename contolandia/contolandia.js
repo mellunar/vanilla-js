@@ -25,3 +25,13 @@ document.addEventListener("DOMContentLoaded", function() {
         x.classList.toggle("bi-x");
     }
 });
+
+/*
+if (window.innerWidth > 1023) {
+    void(0);
+}
+ 
+else {
+    void(0);
+}
+*/
