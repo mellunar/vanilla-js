@@ -125,7 +125,6 @@ header {
     display: inline-block;
 }
 .ddlist {
-    display: none;
     position: absolute;
     background-color: #363449;
     min-width: 175px;
@@ -149,7 +148,6 @@ header {
 .ddlm {
     display: block;
 }
-
 
 .logo {
     height: 20px;
@@ -257,9 +255,7 @@ main {
 
 .booklist a {
     display: flex;
-    display: -webkit-flex;
     flex-direction: column;
-    -webkit-flex-direction: column;
     border: 1px solid #E0E0E0;
     border-radius: 15px;
     background-color: #fff;
@@ -341,27 +337,61 @@ main {
 
 footer {
     background-color: #363449;
-    height: 100px;
     margin-top: 50px;
-    color: #ccc;
+    color: #fff;
 }
 
 footer a {
-    color: #ccc;
+    color: #fff;
 }
 
 footer a:hover {
-    color: #fff;
+    color: #ccc;
+}
+
+footer h3 {
+    font-weight: 500;
 }
 
 #ifooter {
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
-    text-align: center;
-    display: grid;
-    align-items: center;
-    height: 100%;
+    padding: 10px;
+    display: flex;
+    line-height: 2rem;
+}
+
+.ftlogo {
+    height: 20px;
+    width: auto;
+}
+
+.ftlogo:hover {
+    filter: invert(25%);
+}
+
+.ftlc {
+    padding: 10px;
+    width: 60%;
+}
+
+.ftfb {
+    padding: 10px;
+    width: 20%;
+}
+
+.ftfb a {
+    display: block;
+}
+
+.fticons {
+    display: block;
+    font-size: 20px;
+    letter-spacing: 1rem;
+}
+
+#mel {
+    display: block;
 }
 
 @media screen and (max-width: 1023px) {
@@ -437,6 +467,15 @@ footer a:hover {
     }
     .bluni {
         width: 100%;
+    }
+    #ifooter {
+        flex-wrap: wrap;
+    }
+    .ftlc {
+        width: 100%;
+    }
+    .ftfb {
+        width: 33.333%;
     }
 }
 
