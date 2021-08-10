@@ -21,8 +21,8 @@
                 <div id="mobmenu"><a href="javascript:void(0)" onclick="mobilemenu()" role="button"><i class="bi bi-list" onclick="openClose(this)"></i></a></div>
                 <ul id="moblinks">
                     <li class="dropdown">
-                        <div role="button"><a href="#nogo">Histórias</a></div>
-                        <div class="ddlist">
+                        <a href="#nogo" role="button">Histórias</a>
+                        <div class="ddlist" hidden>
                             <a href="#nogo">Aventura</a>
                             <a href="#nogo">Drama</a>
                             <a href="#nogo">Fantasia</a>
@@ -33,8 +33,27 @@
                             <a href="#nogo">Visual</a>
                         </div>
                     </li>
-                    <li><a href="#nogo">Concursos</a></li>
-                    <li><a href="#nogo">Comunidade</a></li>
+                    <li class="dropdown">
+                        <a href="#nogo">Concursos</a>
+                        <div class="ddlist" hidden>
+                            <a href="#nogo">Pena de Ouro</a>
+                            <a href="#nogo">Próximos</a>
+                            <a href="#nogo">Em andamento</a>
+                            <a href="#nogo">Encerrados</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#nogo" role="button">Comunidade</a>
+                        <div class="ddlist" hidden>
+                            <a href="#nogo">Chat</a>
+                            <a href="#nogo">Discord</a>
+                            <a href="#nogo">Fanfics</a>
+                            <a href="#nogo">Forum</a>
+                            <a href="#nogo">Grupo Facebook</a>
+                            <a href="#nogo">Poesia</a>
+                            <a href="#nogo">Reddit</a>
+                        </div>
+                    </li>
                 </ul>
                 <a href="#nogo" id="btlogin">Login</a>
             </div>
@@ -208,7 +227,39 @@
     </main>
     <footer>
         <div id="ifooter">
-            <div>© <a href="https://mellunar.github.io">Melissa Fernandes</a> | Book covers from Canvas</div>
+            <div class="ftlc">
+                <a href="#nogo"><img src="https://live.staticflickr.com/65535/51370453003_5110c52b3a_o.png" alt="" class="ftlogo" /></a>
+                <div class="fticons"><a href="#nogo"><i class="bi bi-discord"></i></a><a href="#nogo"><i class="bi bi-facebook"></i></a><a href="#nogo"><i class="bi bi-reddit"></i></div></a>
+                <div id="mel"><a href="https://mellunar.github.io">Melissa Fernandes</a></div>
+            </div>
+            <div class="ftfb mla">
+                <h3>Histórias</h3>
+                <a href="#nogo">Aventura</a>
+                <a href="#nogo">Drama</a>
+                <a href="#nogo">Fantasia</a>
+                <a href="#nogo">Ficção Científica</a>
+                <a href="#nogo">Infantil</a>
+                <a href="#nogo">Romance</a>
+                <a href="#nogo">Suspense</a>
+                <a href="#nogo">Visual</a>
+            </div>
+            <div class="ftfb">
+                <h3>Concursos</h3>
+                <a href="#nogo">Pena de Ouro</a>
+                <a href="#nogo">Próximos</a>
+                <a href="#nogo">Em andamento</a>
+                <a href="#nogo">Encerrados</a>
+            </div>
+            <div class="ftfb">
+                <h3>Comunidade</h3>
+                <a href="#nogo">Chat</a>
+                <a href="#nogo">Discord</a>
+                <a href="#nogo">Fanfics</a>
+                <a href="#nogo">Forum</a>
+                <a href="#nogo">Grupo Facebook</a>
+                <a href="#nogo">Poesia</a>
+                <a href="#nogo">Reddit</a>
+            </div>
         </div>   
     </footer>
 </body>
