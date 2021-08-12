@@ -4,332 +4,341 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Overpass', sans-serif;    
-    font-size: 16px;
-    background-color: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #363449;    
+    background-color: #f5f5f5;
 }
 
 a {
     text-decoration: none;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-h1 {
-    font-size: 60px;
 }
 
 h2 {
-    font-size: 40px;
-}
-
-h3 {
-    font-size: 28px;
-}
-
-h4 {    
-    font-size: 20px;
-    font-weight: 400;
-}
-
-h6 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+    font-size: 48px;
     font-weight: 500;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 400;
 }
 
 header {
     width: 100%;
-    height: 600px;
-    background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-    border-bottom-left-radius: 100px;
-    color: #fff;
-}
-
-header a {
-    color: #fff;
-    font-weight: 500;
-}
-
-header a:hover{    
-    text-decoration: underline;
-}
-
-#headermain {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    background: url(https://live.staticflickr.com/65535/51370413806_cc3a04801a_o.png);
-    background-position: -450px -1350px;
+    background-color: #363449;
+    background-image: url("data:image/svg+xml,%3Csvg xlink='http://www.w3.org/1999/xlink' viewBox='0 0 5000 5000' xmlns='http://www.w3.org/2000/svg' style='transform: scale(1)%3B'%3E%3Cdefs%3E%3Cfilter id='goo'%3E%3CfeGaussianBlur in='SourceGraphic' stdDeviation='0' result='blur'%3E%3C/feGaussianBlur%3E%3CfeColorMatrix in='blur' type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9' result='good'%3E%3C/feColorMatrix%3E%3CfeComposite in='SourceGraphic' in2='goo' operator='atop'%3E%3C/feComposite%3E%3C/filter%3E%3Cpath d='M255 286C233 286 217 271 214 248C233 242 237 236 235 217Q284 208 285 257C281 273 269 284 255 286z' id='P0'%3E%3C/path%3E%3Cpath d='M269 251L243 268L231 249L245 232L269 251z' id='P1'%3E%3C/path%3E%3Cpath d='M275 245Q280 272 253 275L245 275C225 264 224 240 244 226L275 245z' id='P2'%3E%3C/path%3E%3Cpath d='M255 265L237 241L257 236L266 247L255 265z' id='P3'%3E%3C/path%3E%3Cpath d='M271 238Q286 255 266 267L226 254L237 230C250 237 257 239 271 238z' id='P4'%3E%3C/path%3E%3Cpath d='M238 240L265 244L260 262L245 265L238 240z' id='P5'%3E%3C/path%3E%3Cpath d='M238 224C250 219 263 222 273 233L275 264L222 259Q211 231 238 224z' id='P6'%3E%3C/path%3E%3Cpath d='M253 234L262 240L241 264L235 255L253 234z' id='P7'%3E%3C/path%3E%3Cpath d='M288 240Q301 278 262 287Q228 304 218 273Q205 213 264 214Q293 210 288 240z' id='P8'%3E%3C/path%3E%3Cpath d='M236 247L255 237L258 261L239 258L236 247z' id='P9'%3E%3C/path%3E%3C/defs%3E%3Cg id='group' fill='%234A495C' filter=''%3E%3Cuse x='-126' y='-16' href='%23P8'%3E%3C/use%3E%3Cuse x='-124' y='272' href='%23P3'%3E%3C/use%3E%3Cuse x='-198' y='612' href='%23P2'%3E%3C/use%3E%3Cuse x='47' y='1056' href='%23P2'%3E%3C/use%3E%3Cuse x='-126' y='1309' href='%23P2'%3E%3C/use%3E%3Cuse x='-45' y='1834' href='%23P0'%3E%3C/use%3E%3Cuse x='-8' y='2182' href='%23P5'%3E%3C/use%3E%3Cuse x='-147' y='2593' href='%23P8'%3E%3C/use%3E%3Cuse x='-214' y='2842' href='%23P9'%3E%3C/use%3E%3Cuse x='24' y='3367' href='%23P0'%3E%3C/use%3E%3Cuse x='-63' y='3529' href='%23P6'%3E%3C/use%3E%3Cuse x='-162' y='3925' href='%23P7'%3E%3C/use%3E%3Cuse x='-47' y='4288' href='%23P8'%3E%3C/use%3E%3Cuse x='-90' y='4767' href='%23P9'%3E%3C/use%3E%3Cuse x='92' y='5191' href='%23P3'%3E%3C/use%3E%3Cuse x='433' y='-158' href='%23P5'%3E%3C/use%3E%3Cuse x='237' y='241' href='%23P3'%3E%3C/use%3E%3Cuse x='473' y='830' href='%23P7'%3E%3C/use%3E%3Cuse x='248' y='869' href='%23P6'%3E%3C/use%3E%3Cuse x='349' y='1471' href='%23P2'%3E%3C/use%3E%3Cuse x='267' y='1916' href='%23P3'%3E%3C/use%3E%3Cuse x='467' y='2259' href='%23P4'%3E%3C/use%3E%3Cuse x='242' y='2666' href='%23P1'%3E%3C/use%3E%3Cuse x='407' y='3025' href='%23P6'%3E%3C/use%3E%3Cuse x='195' y='3186' href='%23P5'%3E%3C/use%3E%3Cuse x='151' y='3422' href='%23P7'%3E%3C/use%3E%3Cuse x='275' y='4030' href='%23P7'%3E%3C/use%3E%3Cuse x='337' y='4197' href='%23P4'%3E%3C/use%3E%3Cuse x='436' y='4534' href='%23P4'%3E%3C/use%3E%3Cuse x='332' y='5157' href='%23P0'%3E%3C/use%3E%3Cuse x='774' y='-232' href='%23P1'%3E%3C/use%3E%3Cuse x='618' y='162' href='%23P2'%3E%3C/use%3E%3Cuse x='507' y='579' href='%23P0'%3E%3C/use%3E%3Cuse x='692' y='1198' href='%23P3'%3E%3C/use%3E%3Cuse x='664' y='1560' href='%23P3'%3E%3C/use%3E%3Cuse x='617' y='1650' href='%23P6'%3E%3C/use%3E%3Cuse x='575' y='2241' href='%23P3'%3E%3C/use%3E%3Cuse x='823' y='2620' href='%23P8'%3E%3C/use%3E%3Cuse x='591' y='2867' href='%23P2'%3E%3C/use%3E%3Cuse x='509' y='3164' href='%23P8'%3E%3C/use%3E%3Cuse x='620' y='3571' href='%23P9'%3E%3C/use%3E%3Cuse x='530' y='4014' href='%23P0'%3E%3C/use%3E%3Cuse x='662' y='4475' href='%23P9'%3E%3C/use%3E%3Cuse x='720' y='4600' href='%23P7'%3E%3C/use%3E%3Cuse x='849' y='5010' href='%23P8'%3E%3C/use%3E%3Cuse x='1133' y='-190' href='%23P1'%3E%3C/use%3E%3Cuse x='852' y='323' href='%23P9'%3E%3C/use%3E%3Cuse x='1095' y='775' href='%23P3'%3E%3C/use%3E%3Cuse x='1184' y='1049' href='%23P3'%3E%3C/use%3E%3Cuse x='931' y='1299' href='%23P1'%3E%3C/use%3E%3Cuse x='1008' y='1737' href='%23P7'%3E%3C/use%3E%3Cuse x='926' y='2140' href='%23P6'%3E%3C/use%3E%3Cuse x='986' y='2336' href='%23P9'%3E%3C/use%3E%3Cuse x='1167' y='2884' href='%23P6'%3E%3C/use%3E%3Cuse x='1177' y='3102' href='%23P7'%3E%3C/use%3E%3Cuse x='937' y='3485' href='%23P7'%3E%3C/use%3E%3Cuse x='1082' y='3788' href='%23P3'%3E%3C/use%3E%3Cuse x='1033' y='4278' href='%23P3'%3E%3C/use%3E%3Cuse x='1030' y='4710' href='%23P5'%3E%3C/use%3E%3Cuse x='971' y='4983' href='%23P2'%3E%3C/use%3E%3Cuse x='1416' y='-9' href='%23P9'%3E%3C/use%3E%3Cuse x='1408' y='209' href='%23P1'%3E%3C/use%3E%3Cuse x='1297' y='579' href='%23P6'%3E%3C/use%3E%3Cuse x='1412' y='877' href='%23P6'%3E%3C/use%3E%3Cuse x='1461' y='1239' href='%23P7'%3E%3C/use%3E%3Cuse x='1536' y='1878' href='%23P3'%3E%3C/use%3E%3Cuse x='1342' y='2216' href='%23P6'%3E%3C/use%3E%3Cuse x='1282' y='2480' href='%23P3'%3E%3C/use%3E%3Cuse x='1471' y='2945' href='%23P7'%3E%3C/use%3E%3Cuse x='1481' y='3111' href='%23P0'%3E%3C/use%3E%3Cuse x='1539' y='3550' href='%23P0'%3E%3C/use%3E%3Cuse x='1522' y='4079' href='%23P0'%3E%3C/use%3E%3Cuse x='1458' y='4180' href='%23P7'%3E%3C/use%3E%3Cuse x='1325' y='4556' href='%23P1'%3E%3C/use%3E%3Cuse x='1305' y='5118' href='%23P6'%3E%3C/use%3E%3Cuse x='1855' y='-57' href='%23P0'%3E%3C/use%3E%3Cuse x='1880' y='479' href='%23P3'%3E%3C/use%3E%3Cuse x='1689' y='532' href='%23P2'%3E%3C/use%3E%3Cuse x='1868' y='942' href='%23P5'%3E%3C/use%3E%3Cuse x='1820' y='1488' href='%23P7'%3E%3C/use%3E%3Cuse x='1907' y='1827' href='%23P4'%3E%3C/use%3E%3Cuse x='1822' y='2029' href='%23P7'%3E%3C/use%3E%3Cuse x='1702' y='2609' href='%23P1'%3E%3C/use%3E%3Cuse x='1733' y='2947' href='%23P4'%3E%3C/use%3E%3Cuse x='1603' y='3317' href='%23P6'%3E%3C/use%3E%3Cuse x='1645' y='3665' href='%23P9'%3E%3C/use%3E%3Cuse x='1599' y='3807' href='%23P5'%3E%3C/use%3E%3Cuse x='1916' y='4198' href='%23P6'%3E%3C/use%3E%3Cuse x='1708' y='4850' href='%23P2'%3E%3C/use%3E%3Cuse x='1681' y='5173' href='%23P3'%3E%3C/use%3E%3Cuse x='2233' y='-184' href='%23P4'%3E%3C/use%3E%3Cuse x='2014' y='133' href='%23P7'%3E%3C/use%3E%3Cuse x='2125' y='503' href='%23P7'%3E%3C/use%3E%3Cuse x='1966' y='1102' href='%23P3'%3E%3C/use%3E%3Cuse x='1986' y='1467' href='%23P3'%3E%3C/use%3E%3Cuse x='1950' y='1755' href='%23P1'%3E%3C/use%3E%3Cuse x='2267' y='1953' href='%23P3'%3E%3C/use%3E%3Cuse x='2144' y='2566' href='%23P5'%3E%3C/use%3E%3Cuse x='2179' y='2803' href='%23P2'%3E%3C/use%3E%3Cuse x='2053' y='3116' href='%23P6'%3E%3C/use%3E%3Cuse x='2219' y='3738' href='%23P8'%3E%3C/use%3E%3Cuse x='2103' y='3935' href='%23P7'%3E%3C/use%3E%3Cuse x='2111' y='4504' href='%23P5'%3E%3C/use%3E%3Cuse x='2156' y='4526' href='%23P6'%3E%3C/use%3E%3Cuse x='2050' y='4903' href='%23P6'%3E%3C/use%3E%3Cuse x='2552' y='-246' href='%23P4'%3E%3C/use%3E%3Cuse x='2676' y='273' href='%23P5'%3E%3C/use%3E%3Cuse x='2408' y='724' href='%23P1'%3E%3C/use%3E%3Cuse x='2503' y='1044' href='%23P7'%3E%3C/use%3E%3Cuse x='2506' y='1322' href='%23P7'%3E%3C/use%3E%3Cuse x='2357' y='1585' href='%23P9'%3E%3C/use%3E%3Cuse x='2392' y='2211' href='%23P2'%3E%3C/use%3E%3Cuse x='2552' y='2378' href='%23P4'%3E%3C/use%3E%3Cuse x='2465' y='2756' href='%23P7'%3E%3C/use%3E%3Cuse x='2650' y='3311' href='%23P5'%3E%3C/use%3E%3Cuse x='2371' y='3725' href='%23P8'%3E%3C/use%3E%3Cuse x='2379' y='4002' href='%23P7'%3E%3C/use%3E%3Cuse x='2478' y='4169' href='%23P2'%3E%3C/use%3E%3Cuse x='2592' y='4570' href='%23P3'%3E%3C/use%3E%3Cuse x='2461' y='4970' href='%23P9'%3E%3C/use%3E%3Cuse x='2836' y='-240' href='%23P2'%3E%3C/use%3E%3Cuse x='2939' y='235' href='%23P9'%3E%3C/use%3E%3Cuse x='2785' y='779' href='%23P9'%3E%3C/use%3E%3Cuse x='3049' y='1041' href='%23P0'%3E%3C/use%3E%3Cuse x='2749' y='1354' href='%23P1'%3E%3C/use%3E%3Cuse x='2841' y='1676' href='%23P3'%3E%3C/use%3E%3Cuse x='2721' y='2317' href='%23P0'%3E%3C/use%3E%3Cuse x='2760' y='2410' href='%23P3'%3E%3C/use%3E%3Cuse x='2929' y='2923' href='%23P0'%3E%3C/use%3E%3Cuse x='3003' y='3313' href='%23P7'%3E%3C/use%3E%3Cuse x='2965' y='3738' href='%23P5'%3E%3C/use%3E%3Cuse x='2686' y='4138' href='%23P1'%3E%3C/use%3E%3Cuse x='2832' y='4401' href='%23P2'%3E%3C/use%3E%3Cuse x='2989' y='4674' href='%23P0'%3E%3C/use%3E%3Cuse x='2824' y='5036' href='%23P6'%3E%3C/use%3E%3Cuse x='3171' y='2' href='%23P4'%3E%3C/use%3E%3Cuse x='3141' y='204' href='%23P3'%3E%3C/use%3E%3Cuse x='3132' y='805' href='%23P8'%3E%3C/use%3E%3Cuse x='3166' y='969' href='%23P2'%3E%3C/use%3E%3Cuse x='3365' y='1316' href='%23P9'%3E%3C/use%3E%3Cuse x='3075' y='1718' href='%23P3'%3E%3C/use%3E%3Cuse x='3371' y='2088' href='%23P4'%3E%3C/use%3E%3Cuse x='3339' y='2552' href='%23P4'%3E%3C/use%3E%3Cuse x='3136' y='2804' href='%23P2'%3E%3C/use%3E%3Cuse x='3129' y='3141' href='%23P2'%3E%3C/use%3E%3Cuse x='3097' y='3652' href='%23P3'%3E%3C/use%3E%3Cuse x='3400' y='4149' href='%23P9'%3E%3C/use%3E%3Cuse x='3280' y='4321' href='%23P9'%3E%3C/use%3E%3Cuse x='3120' y='4540' href='%23P2'%3E%3C/use%3E%3Cuse x='3168' y='5178' href='%23P7'%3E%3C/use%3E%3Cuse x='3608' y='27' href='%23P8'%3E%3C/use%3E%3Cuse x='3472' y='436' href='%23P8'%3E%3C/use%3E%3Cuse x='3419' y='528' href='%23P0'%3E%3C/use%3E%3Cuse x='3443' y='1097' href='%23P4'%3E%3C/use%3E%3Cuse x='3715' y='1573' href='%23P0'%3E%3C/use%3E%3Cuse x='3767' y='1735' href='%23P6'%3E%3C/use%3E%3Cuse x='3723' y='2028' href='%23P1'%3E%3C/use%3E%3Cuse x='3699' y='2343' href='%23P2'%3E%3C/use%3E%3Cuse x='3573' y='2875' href='%23P6'%3E%3C/use%3E%3Cuse x='3577' y='3159' href='%23P3'%3E%3C/use%3E%3Cuse x='3443' y='3778' href='%23P8'%3E%3C/use%3E%3Cuse x='3611' y='4021' href='%23P1'%3E%3C/use%3E%3Cuse x='3525' y='4284' href='%23P0'%3E%3C/use%3E%3Cuse x='3452' y='4873' href='%23P0'%3E%3C/use%3E%3Cuse x='3704' y='4909' href='%23P3'%3E%3C/use%3E%3Cuse x='3917' y='41' href='%23P5'%3E%3C/use%3E%3Cuse x='4002' y='206' href='%23P6'%3E%3C/use%3E%3Cuse x='3985' y='485' href='%23P3'%3E%3C/use%3E%3Cuse x='3861' y='1121' href='%23P3'%3E%3C/use%3E%3Cuse x='3972' y='1466' href='%23P4'%3E%3C/use%3E%3Cuse x='4141' y='1884' href='%23P6'%3E%3C/use%3E%3Cuse x='3848' y='1962' href='%23P9'%3E%3C/use%3E%3Cuse x='4025' y='2624' href='%23P0'%3E%3C/use%3E%3Cuse x='3919' y='2709' href='%23P9'%3E%3C/use%3E%3Cuse x='4049' y='3123' href='%23P1'%3E%3C/use%3E%3Cuse x='3951' y='3501' href='%23P1'%3E%3C/use%3E%3Cuse x='3874' y='3862' href='%23P0'%3E%3C/use%3E%3Cuse x='3907' y='4191' href='%23P1'%3E%3C/use%3E%3Cuse x='4125' y='4576' href='%23P3'%3E%3C/use%3E%3Cuse x='4098' y='4945' href='%23P1'%3E%3C/use%3E%3Cuse x='4189' y='89' href='%23P8'%3E%3C/use%3E%3Cuse x='4421' y='362' href='%23P8'%3E%3C/use%3E%3Cuse x='4348' y='524' href='%23P9'%3E%3C/use%3E%3Cuse x='4193' y='890' href='%23P6'%3E%3C/use%3E%3Cuse x='4466' y='1575' href='%23P2'%3E%3C/use%3E%3Cuse x='4219' y='1813' href='%23P1'%3E%3C/use%3E%3Cuse x='4314' y='2000' href='%23P2'%3E%3C/use%3E%3Cuse x='4295' y='2363' href='%23P6'%3E%3C/use%3E%3Cuse x='4406' y='2726' href='%23P9'%3E%3C/use%3E%3Cuse x='4193' y='3276' href='%23P4'%3E%3C/use%3E%3Cuse x='4321' y='3586' href='%23P6'%3E%3C/use%3E%3Cuse x='4151' y='3880' href='%23P8'%3E%3C/use%3E%3Cuse x='4252' y='4215' href='%23P1'%3E%3C/use%3E%3Cuse x='4178' y='4778' href='%23P7'%3E%3C/use%3E%3Cuse x='4267' y='5006' href='%23P7'%3E%3C/use%3E%3Cuse x='4830' y='-222' href='%23P9'%3E%3C/use%3E%3Cuse x='4810' y='119' href='%23P2'%3E%3C/use%3E%3Cuse x='4659' y='546' href='%23P5'%3E%3C/use%3E%3Cuse x='4809' y='951' href='%23P8'%3E%3C/use%3E%3Cuse x='4690' y='1276' href='%23P6'%3E%3C/use%3E%3Cuse x='4798' y='1708' href='%23P7'%3E%3C/use%3E%3Cuse x='4878' y='2117' href='%23P7'%3E%3C/use%3E%3Cuse x='4715' y='2589' href='%23P4'%3E%3C/use%3E%3Cuse x='4530' y='3007' href='%23P2'%3E%3C/use%3E%3Cuse x='4625' y='3085' href='%23P5'%3E%3C/use%3E%3Cuse x='4783' y='3454' href='%23P7'%3E%3C/use%3E%3Cuse x='4701' y='3963' href='%23P2'%3E%3C/use%3E%3Cuse x='4879' y='4447' href='%23P3'%3E%3C/use%3E%3Cuse x='4792' y='4875' href='%23P6'%3E%3C/use%3E%3Cuse x='4557' y='5007' href='%23P0'%3E%3C/use%3E%3Cuse x='4972' y='-119' href='%23P6'%3E%3C/use%3E%3Cuse x='5159' y='422' href='%23P6'%3E%3C/use%3E%3Cuse x='5074' y='746' href='%23P9'%3E%3C/use%3E%3Cuse x='4985' y='892' href='%23P3'%3E%3C/use%3E%3Cuse x='5237' y='1579' href='%23P8'%3E%3C/use%3E%3Cuse x='5208' y='1688' href='%23P4'%3E%3C/use%3E%3Cuse x='4937' y='2207' href='%23P2'%3E%3C/use%3E%3Cuse x='5037' y='2414' href='%23P1'%3E%3C/use%3E%3Cuse x='5113' y='2898' href='%23P7'%3E%3C/use%3E%3Cuse x='5149' y='3378' href='%23P3'%3E%3C/use%3E%3Cuse x='5036' y='3629' href='%23P6'%3E%3C/use%3E%3Cuse x='5143' y='3922' href='%23P2'%3E%3C/use%3E%3Cuse x='5105' y='4491' href='%23P3'%3E%3C/use%3E%3Cuse x='5187' y='4580' href='%23P9'%3E%3C/use%3E%3Cuse x='4997' y='5109' href='%23P8'%3E%3C/use%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: initial;
+    max-height: 600px;
 }
 
-#headercont {
-    max-width: 1120px;
-    height: 100%;
-    padding: 50px 10px;
-    margin: auto;
-}
-
-#headernav {
+.tpbr {
+    display: block;
     height: 70px;
+    font-size: 1rem;    
+    padding: 15px;
+}
+
+.jstn {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+
+.topnav {
     display: flex;
+    max-width: 1200px;
+    margin: auto;
     align-items: center;
 }
 
-nav {
-    margin-left: 50px;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
+#mobmenu {
+    display: none;
     padding: 1rem;
-}
-
-.arrow-light {
-    display: inline-block;
-    background: url(https://live.staticflickr.com/65535/51370413756_618f4ea4e9_o.png);
-    background-size: cover;
-    width: 10px;
-    height: 7px;
-    margin-left: 10px;
-}
-
-.alhover {
-    transform: scaleY(-1);
-}
-
-.navitem {
     position: absolute;
-    top: 110px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 1rem 0;
-    width: 160px;
+    top: 0;
+    left: 0;
 }
 
-.navitem a {
-    color: hsl(240, 10%, 16%);
-    font-weight: 400;
+.topnav ul {
+    list-style: none;
+    margin-left: auto;
 }
 
-.navitem a:hover {
-    font-weight: 500;
+.topnav ul a {
+    color: #fff;
     text-decoration: none;
 }
 
-.navitem li {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem 1rem;
+.topnav ul a:hover {
+    color: #ffab00;
+    text-decoration: none;
 }
 
-.show {
+.topnav li {
+    padding: 0.7rem 1rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.tnscroll {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 10px 3px rgba(0,0,0,.1);
+    animation: fadeIn .25s ease-in;
+    z-index: 999;
+}
+.tnscroll ul a {
+    color: #363449;
+    text-decoration: none;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.ddlist {
+    position: absolute;
+    background-color: #363449;
+    min-width: 175px;
+    z-index: 1;
+    box-shadow: 0 2px 10px 3px rgba(0,0,0,.1);
+    top: 41px;
+    border-radius: 7px;
+    padding: 0.4rem;
+}
+.ddlist a {
+    padding: 0.6rem;
+    text-decoration: none;
+    display: block;
+}
+.tnscroll .ddls a {
+    color: #fff;
+}
+.dropdown:hover .ddlist {
+    display: block;
+}
+.ddlm {
     display: block;
 }
 
-.hide {
-    display: none;
+.logo {
+    height: 20px;
+    width: 162px;
+    background: url(https://live.staticflickr.com/65535/51364138805_945d2b5d45_o.png);
+    background-size: auto 20px;
+}
+.logoscroll {
+    background: url(https://live.staticflickr.com/65535/51363347323_c73676ba02_o.png);
+    background-size: auto 20px;
 }
 
-#login {
-    margin-left: auto;
-    display: inline;
+#btlogin {
+    margin-left: 1rem;
+    padding: 0.7rem 1rem;
+    font-weight: 500;
+    color: #363449;
+    background-color: #ffab00;
+    border-radius: 7px;
 }
 
-#login a, #headertext a {
-    padding: 1rem 2rem;
+#btlogin:hover {
+    background-color: #ffc400;
 }
 
-.whitebtn {
-    color: hsl(356, 100%, 66%);
-    background-color: #fff;
-    border-radius: 50px;
-}
-
-.whitebtn:hover {
-    color: #fff;
-    background-color: hsl(355, 100%, 74%);
-    text-decoration: none;
-}
-
-#headertext {
+#homebox {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     align-items: center;
-    text-align: center;
-    height: 100%;
+    height: auto;
+    padding: 40px 0;
 }
 
-#headerinner {    
-    margin: auto;
-    line-height: 4em;
+.mla {
+    margin-left: auto;
 }
 
-#headerinner div {
-    margin-top: 1.5em;
+#hometxt {
+    min-width: 490px;
+    order: 1;
 }
 
-.tnspbtn {
-    margin-left: 1em;
-    border-radius: 50px;
-    border: 1px solid #fff;
+#homeimg {
+    max-width: 700px;
+    order: 2;
 }
 
-.tnspbtn:hover {
-    text-decoration: none;
-    background-color: #fff;
-    color: hsl(356, 100%, 66%);
+#undraw {
+    width: 100%;
+    height: auto;
+}
+
+.pdng {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tta {
+    color: #fff;
+}
+
+.ttb {
+    color: #d5d1ec;
 }
 
 main {
-    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.pt50 {
+    padding-top: 50px;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+.section {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+.section ul {
+    list-style: none;
+}
+.section li a{
+    color: #363449;
+}
+
+.booklist {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px -10px;
+}
+
+.booklist article {
+    padding: 10px 10px;
+    display: flex;
+}
+
+.booklist a {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    background-color: #fff;
     overflow: hidden;
-    
+    color: #363449;
+    height: auto;    
 }
 
-main section {
-    margin: auto;
+.booklist a:hover {
+    border-color: #908da6;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 }
 
-#future {
-    max-width: 1120px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 150px auto;
+.bldest {
+    width: 25%;
+}
+
+.blrec {
+    width: 20%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+}
+
+.rec6 {
+    display: none !important;
+}
+
+.bluni {
+    width: 33.333%;
+}
+
+.cardimgw {
     width: 100%;
-}
-
-#future h2 {
-    margin: auto;
-}
-
-#future h2, #future h3, #last h3 {
-    color: hsl(208, 49%, 24%);
-}
-
-#futurediv {
-    display: inline-flex;
-    width: 100%;
-    padding: 5px;
-    margin-top: 100px;
-}
-
-#futurediv div{
-    width: 50%;
     height: auto;
-    padding: 5px;
 }
 
-p {
-    margin-top: 1.5em;
+.cardtxt {
+    padding: 15px;
+    font-size: 17px;
+    line-height: 1.55rem;
 }
 
-.w100hmc {
-    width: 100% !important;
-    height: max-content !important;
-}
-.flexend {
-    display: flex;
-    flex-wrap: wrap;
+.cic {
+    margin-left: 1rem;
 }
 
-.flexend div:nth-child(2) {
-    align-self: flex-end;
+.linkfill {
+    display: block;
 }
 
-#illustrationpc {
-    margin-top: -241px;
-    margin-left: 70px;
-    margin-bottom: -220px;
+.imghvr {
+    position: relative;
 }
 
-#illustrationmb {
-    display: none;
+.txtbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,0.75);    
+    line-height: 1.55rem;
 }
 
-#infrastructure {
-    background: linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
-    background-size: auto 100%;
+.imghvr:hover .txtbox {
+    opacity: 1;
+}
+
+.txthvr {
     color: #fff;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    margin: 250px auto;
-}
+    position: absolute;
+    padding: 15px;
 
-#infrastructure > div {
-    background: url(https://live.staticflickr.com/65535/51370413811_dd5b1126d5_o.png);
-    background-repeat: no-repeat;
-    background-position: 60px -550px;
-    background-size: initial;
-}
-
-#infinner {
-    max-width: 1120px;
-    margin: auto;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-}
-
-#infinner div {
-    width: 50%;
-    padding: 5px;
-}
-
-#iphone {
-    margin: -80px auto -125px auto;
-}
-
-#future p, #last p {
-    color: hsl(240, 10%, 16%);
-}
-
-#last {
-    max-width: 1120px;
-    margin: 300px auto;
-    padding: 5px;
-    width: 100%;
-}
-
-#lastdiv {
-    display: flex;
-}
-
-#lastdiv div {
-    width: 50%;
-    height: auto;
-    padding: 5px;
-}
-
-#laptoppc {
-    margin: -210px 0px -200px -450px;
-}
-
-#laptopmb {
-    display: none;
 }
 
 footer {
-    background-color: hsl(240, 10%, 16%);
-}
-
-#ifooter {
-    max-width: 1120px;
-    padding: 50px 5px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+    background-color: #363449;
+    margin-top: 50px;
     color: #fff;
-    line-height: 2em;
-}
-
-#ifooter div {
-    width: 25%;
 }
 
 footer a {
@@ -337,122 +346,166 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #ccc;
 }
 
-footer ul {
-    list-style: none;
+footer h3 {
+    font-weight: 500;
 }
 
-.hmenuo {
+#ifooter {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    line-height: 2rem;
+}
+
+.ftlogo {
+    height: 20px;
+    width: auto;
+}
+
+.ftlogo:hover {
+    filter: invert(25%);
+}
+
+.ftlc {
+    padding: 10px;
+    width: 60%;
+}
+
+.ftfb {
+    padding: 10px;
+    width: 20%;
+}
+
+.ftfb a {
     display: block;
-    background: url(https://live.staticflickr.com/65535/51371421150_6182da9e62_o.png);
-    background-size: cover;
-    width: 32px;
-    height: 18px;
 }
 
-.hmenuc {
+.fticons {
     display: block;
-    background: url(https://live.staticflickr.com/65535/51371146539_43f6d40707_o.png);
-    background-size: cover;
-    width: 26px;
-    height: 26px;
+    font-size: 20px;
+    letter-spacing: 1rem;
 }
 
-#mobmenu {
-    display: none;
-    margin-left: auto;
-}
-
-#mobmenu a {
+#mel {
     display: block;
 }
 
-@media screen and (max-width: 768px) {
-    nav, #login {
-        display: none;
+@media screen and (max-width: 1023px) {
+    #homebox {
+        flex-direction: column;
+        padding: 40px 20px;
     }
-    header {
-        height: 600px;
-    }
-    h1 {
-        font-size: 40px;
-        margin-top: -1em;
-        margin-bottom: 1em;
-    }
-    h2 {
-        font-size: 28px;
-    }    
-    h3 {
-        font-size: 28px;
-    }    
-    h4 {    
-        font-size: 20px;
-        font-weight: 400;
-    }
-    #headerinner div {
-        margin-top: 4em;
-    }
-    #headercont {
-        padding: 50px 30px;
-    }
-    #headerinner {
-        line-height: normal;
-        margin-top: 120px;
-    }
-    #mobmenu {
-        display: block;
-    }
-    .arrow-light {
-        background: url(https://live.staticflickr.com/65535/51370413776_f1e420a7c0_o.png);
-    }
-    main, footer {
+    #hometxt {
+        order: 2;
         text-align: center;
     }
-    #future, #infinner, #last {
-        max-width: 100%;
-        margin: 80px auto;
+    #homeimg {
+        order: 1;
     }
-    #futurediv, #infinner, #lastdiv {
+    .jstn {
         display: flex;
-        flex-wrap: wrap;
-        margin-top: 30px;
+        align-items: center;
     }
-    #futurediv div, #lastdiv div {
-        width: 100%;
+    #la {
+        margin: auto;
     }
-    #illustrationpc, #laptoppc {
+    .logo, .logoscroll {
+        width: 203px;
+        height: 25px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #mobmenu {
+        display: flex;
+        font-size: 30px;
+    }
+    .topnav ul {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        background-color: #363449;
+        box-shadow: 0 2px 10px 3px rgba(0,0,0,.1);
+        padding: 0.4rem;
+    }
+    .topnav li {
+        padding: 1rem;
+    }
+    #mobmenu a, #mobmenu a::selection {
+        color: #fff;
+    }
+    .tnscroll #mobmenu a, .tnscroll #mobmenu a::selection {
+        color: #363449;
+    }
+    .tnscroll ul a {
+        color: #fff;
+        text-decoration: none;
+    }
+    #moblinks {
         display: none;
     }
-    #illustrationmb, #laptopmb, #iphone {
-        display: block;
-        margin: auto;
-        width: 100%;
-        height: auto;
+    #btlogin {
+        position: absolute;
+        top: 15px;
+        right: 15px;
     }
-    #iphone {
-        margin: -210px auto auto auto;
+    .bldest {
+        width: 50%;
     }
-    .flexend {
-        order: 2;
+    .blrec {
+        width: 33.333%;
     }
-    .flexend div:nth-of-type(2) {
-        margin-top: 1.5em;
+    .rec6 {
+        display: block !important;
     }
-    #infrastructure {
-        margin-bottom: auto;
-    }
-    #infinner h3 {
-        font-size: 40px;
-    }
-    #infinner div:nth-of-type(2) {
-        margin-bottom: 100px;
-    }
-    #ifooter div {
+    .bluni {
         width: 100%;
     }
-    #ifooter div:nth-last-child(-n+2) {
-        margin-top: 2em;
+    #ifooter {
+        flex-wrap: wrap;
+    }
+    .ftlc {
+        width: 100%;
+    }
+    .ftfb {
+        width: 33.333%;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    h2 {
+        font-size: 32px;
+    }
+    .logo, .logoscroll {
+        width: 162px;
+        height: 20px;
+        background-size: auto 20px;
+    }
+    #mobmenu {
+        font-size: 24px;
+        padding: 1.4rem;
+    }
+    #hometxt {
+        min-width: 100%;
+        padding: 0;
+    }
+
+    .cardtxt {
+        font-size: 16px;
+    }
+
+    .bldest {
+        width: 100%;
+    }
+
+    .blrec {
+        width: 50%;
     }
 }
