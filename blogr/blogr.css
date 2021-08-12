@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;    
+    font-size: 16px;
+    background-color: #fafafa;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {    
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h6 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    border-bottom-left-radius: 100px;
+    color: #fff;
+}
+
+header a {
+    color: #fff;
+    font-weight: 500;
+}
+
+header a:hover{    
+    text-decoration: underline;
+}
+
+#headermain {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: url(https://live.staticflickr.com/65535/51370413806_cc3a04801a_o.png);
+    background-position: -450px -1350px;
+    background-repeat: no-repeat;
+    background-size: initial;
+}
+
+#headercont {
+    max-width: 1120px;
+    height: 100%;
+    padding: 50px 10px;
+    margin: auto;
+}
+
+#headernav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    margin-left: 50px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 1rem;
+}
+
+.arrow-light {
+    display: inline-block;
+    background: url(https://live.staticflickr.com/65535/51370413756_618f4ea4e9_o.png);
+    background-size: cover;
+    width: 10px;
+    height: 7px;
+    margin-left: 10px;
+}
+
+.navitem {
+    position: absolute;
+    top: 110px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem 0;
+    width: 160px;
+}
+
+.navitem a {
+    color: hsl(240, 10%, 16%);
+    font-weight: 400;
+}
+
+.navitem a:hover {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navitem li {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+#login {
+    margin-left: auto;
+    display: inline;
+}
+
+#login a, #headertext a {
+    padding: 1rem 2rem;
+}
+
+.whitebtn {
+    color: hsl(356, 100%, 66%);
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.whitebtn:hover {
+    color: #fff;
+    background-color: hsl(355, 100%, 74%);
+    text-decoration: none;
+}
+
+#headertext {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+#headerinner {    
+    margin: auto;
+    line-height: 4em;
+}
+
+#headerinner div {
+    margin-top: 1.5em;
+}
+
+.tnspbtn {
+    margin-left: 1em;
+    border-radius: 50px;
+    border: 1px solid #fff;
+}
+
+.tnspbtn:hover {
+    text-decoration: none;
+    background-color: #fff;
+    color: hsl(356, 100%, 66%);
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+main section {
+    margin: auto;
+}
+
+#future {
+    max-width: 1120px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 150px auto;
+    width: 100%;
+}
+
+#future h2 {
+    margin: auto;
+}
+
+#future h2, #future h3, #last h3 {
+    color: hsl(208, 49%, 24%);
+}
+
+#futurediv {
+    display: inline-flex;
+    width: 100%;
+    padding: 5px;
+    margin-top: 100px;
+}
+
+#futurediv div{
+    width: 50%;
+    height: auto;
+    padding: 5px;
+}
+
+p {
+    margin-top: 1.5em;
+}
+
+.w100hmc {
+    width: 100% !important;
+    height: max-content !important;
+}
+.flexend {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexend div:nth-child(2) {
+    align-self: flex-end;
+}
+
+#illustrationpc {
+    margin-top: -241px;
+    margin-left: 70px;
+    margin-bottom: -220px;
+}
+
+#illustrationmb {
+    display: none;
+}
+
+#infrastructure {
+    background: linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-size: auto 100%;
+    color: #fff;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    margin: 250px auto;
+}
+
+#infrastructure > div {
+    background: url(https://live.staticflickr.com/65535/51370413811_dd5b1126d5_o.png);
+    background-repeat: no-repeat;
+    background-position: 60px -550px;
+    background-size: initial;
+}
+
+#infinner {
+    max-width: 1120px;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#infinner div {
+    width: 50%;
+    padding: 5px;
+}
+
+#iphone {
+    margin: -80px auto -125px auto;
+}
+
+#future p, #last p {
+    color: hsl(240, 10%, 16%);
+}
+
+#last {
+    max-width: 1120px;
+    margin: 300px auto;
+    padding: 5px;
+    width: 100%;
+}
+
+#lastdiv {
+    display: flex;
+}
+
+#lastdiv div {
+    width: 50%;
+    height: auto;
+    padding: 5px;
+}
+
+#laptoppc {
+    margin: -210px 0px -200px -450px;
+}
+
+#laptopmb {
+    display: none;
+}
+
+footer {
+    background-color: hsl(240, 10%, 16%);
+}
+
+#ifooter {
+    max-width: 1120px;
+    padding: 50px 5px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    line-height: 2em;
+}
+
+#ifooter div {
+    width: 25%;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+}
+
+.hmenuo {
+    display: block;
+    background: url(https://live.staticflickr.com/65535/51371421150_6182da9e62_o.png);
+    background-size: cover;
+    width: 32px;
+    height: 18px;
+}
+
+.hmenuc {
+    display: block;
+    background: url(https://live.staticflickr.com/65535/51371146539_43f6d40707_o.png);
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+#mobmenu {
+    display: none;
+    margin-left: auto;
+}
+
+#mobmenu a {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    nav, #login {
+        display: none;
+    }
+    header {
+        height: 600px;
+    }
+    h1 {
+        font-size: 40px;
+        margin-top: -1em;
+        margin-bottom: 1em;
+    }
+    #headerinner div {
+        margin-top: 4em;
+    }
+    #headercont {
+        padding: 50px 30px;
+    }
+    #headerinner {
+        line-height: normal;
+        margin-top: 120px;
+    }
+    #mobmenu {
+        display: block;
+    }
+}
