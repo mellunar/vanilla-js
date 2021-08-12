@@ -1,37 +1,51 @@
-window.onload = function () {
-    window.onscroll = function() {
-        const jstn = document.getElementById("jstn");
-        const logo = document.getElementById("logo");
-        const ddlist = document.getElementsByClassName("ddlist");
-        if (window.scrollY > 150) {
-            jstn.classList.add("tnscroll")
-            logo.classList.add("logoscroll")
-            for (i = 0; i < ddlist.length; i++) {ddlist[i].classList.add("ddls")}
+if (window.innerWidth < 769) {
+    document.addEventListener("DOMContentLoaded", function() {
+                document.querySelectorAll(".navlistm").forEach(element => element.addEventListener("click", function () {
+                nextNode = this.nextElementSibling.classList;
+                arrow = this.querySelector(".arrow-light").classList;
+                if(!nextNode.contains("show")){
+                	nextNode.add("show");
+                    arrow.add('alhover')
+                }
+                else{
+                    nextNode.remove("show");
+                    arrow.remove('alhover')
+                }
+            })
+        );
+        window.openClose = function openClose(x) {
+            x.classList.toggle("hmenuc");
+            document.querySelector("nav").classList.toggle("show")
         }
-        else {
-            jstn.classList.remove("tnscroll")
-            logo.classList.remove("logoscroll")
-            for (i = 0; i < ddlist.length; i++) {ddlist[i].classList.remove("ddls")}
-        }
-    };
-};
-
-document.addEventListener("DOMContentLoaded", function() {
-    window.mobilemenu = function mobilemenu() {
-        let o = document.getElementById("moblinks");
-        o.style.display === "flex" ? o.style.display = "none" : o.style.display = "flex"
-    }
-    window.openClose = function openClose(x) {
-        x.classList.toggle("bi-x");
-    }
-});
-
-/*
-if (window.innerWidth > 1023) {
-    void(0);
+        /*let list = document.querySelectorAll(".navlistd");
+        list.forEach((navlist, index) => {
+            navlist.onclick = (event) => {
+                list[index].querySelector('.navitem').classList.toggle('show')
+            }
+        })*/
+    });
+    
 }
  
 else {
-    void(0);
+    document.addEventListener("DOMContentLoaded", function() {
+        let list = document.querySelectorAll(".navlistd");
+        list.forEach((navlist, index) => {
+            let dlist = list[index].querySelector('.navitem').classList;
+            let arrow = list[index].querySelector('.arrow-light').classList;
+            navlist.onmouseover = (event) => {
+                dlist.add('show');
+                arrow.add('alhover')
+            };
+            navlist.onmouseout = (event) => {
+                dlist.remove('show');
+                arrow.remove('alhover')
+            };
+        })
+        /*
+        document.querySelectorAll(".navlist").forEach(element => element.addEventListener("mouseover", function() {this.nextElementSibling.classList.add("show")}));
+        document.querySelectorAll(".navlist").forEach(element => element.addEventListener("mouseout", function() {this.nextElementSibling.classList.remove("show")}));
+        */
+       
+    });
 }
-*/
