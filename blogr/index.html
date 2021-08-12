@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Challenge by Frontend Mentor | Coded by Melissa Fernandes -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='blogr.css'>
+    <script src="blogr.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,600;1,300;1,600&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+    <title>Blogr - Frontend Mentor</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://live.staticflickr.com/65535/51371146564_427b1eb892_o.png">
+</head>
+<body>
+    <header>
+        <div id="headermain">
+            <div id="headercont">
+                <div id="headernav">
+                    <a href="#nogo"><img src="https://live.staticflickr.com/65535/51369654452_ea9dfcd165_o.png" alt="logo" /></a>
+                    <div id="mobmenu">
+                        <a href="#nogo"><i class="hmenuo" onclick="openClose(this)"></i></a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="navlist">
+                                <a href="#nogo">Product<i class="arrow-light"></i></a>
+                                <ul class="navitem" hidden>
+                                    <li><a href ="#nogo">Overview</a></li>
+                                    <li><a href ="#nogo">Pricing</a></li>
+                                    <li><a href ="#nogo">Marketplace</a></li>
+                                    <li><a href ="#nogo">Features</a></li>
+                                    <li><a href ="#nogo">Integrations</a></li>
+                                </ul>
+                            </li>
+                            <li class="navlist">
+                                <a href="#nogo">Company<i class="arrow-light"></i></a>
+                                <ul class="navitem" hidden>
+                                    <li><a href ="#nogo">About</a></li>
+                                    <li><a href ="#nogo">Team</a></li>
+                                    <li><a href ="#nogo">Blog</a></li>
+                                    <li><a href ="#nogo">Careers</a></li>
+                                </ul>
+                            </li>
+                            <li class="navlist">
+                                <a href="#nogo">Connect<i class="arrow-light"></i></a>
+                                <ul class="navitem" hidden>
+                                    <li><a href ="#nogo">Contact</a></li>
+                                    <li><a href ="#nogo">Newsletter</a></li>
+                                    <li><a href ="#nogo">LinkedIn</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="login">
+                        <a href="#nogo">Login</a>
+                        <a href="#nogo" role="button" class="whitebtn">Sign Up</a>
+                    </div>
+                </div>
+                <div id="headertext">
+                    <div id="headerinner">
+                        <h1>A modern publishing platform</h1>
+                        <h4>Grow your audience and build your brand online</h4>
+                        <div><a href="#nogo" role="button" class="whitebtn">Start for Free</a><a href="#nogo" role="button" class="tnspbtn">Learn More</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="future">
+            <h2>Designed for the future</h2>
+            <div id="futurediv">
+                <div class="flexend">
+                    <div class="w100hmc">
+                        <h3>Introducing an extensible editor</h3>
+                        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+                            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. 
+                            Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+                    </div>
+                    <div class="w100hmc">
+                        <h3>Robust Content Management</h3>
+                        <p>Flexible content management enables users to easily move through posts. 
+                            Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+                    </div>
+                </div>
+                <div>
+                    <img id="illustrationpc" src="https://live.staticflickr.com/65535/51369653797_cf584344d9_o.png" alt="" />
+                    <img id="illustrationmb" src="https://live.staticflickr.com/65535/51371421140_ba7e7a9418_o.png" alt="" />
+                </div>
+            </div>
+        </section>
+        <section id="infrastructure">
+            <div>
+            <div id="infinner">
+                <div class="w100hmc"><img id="iphone" src="https://live.staticflickr.com/65535/51371421110_afd7211998_o.png" alt="" /></div>
+                <div class="w100hmc">
+                    <h3>State of the Art Infrastructure</h3>
+                    <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+                    This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section id="last">
+            <div id="lastdiv">
+                <div>
+                    <img id="laptoppc" src="https://live.staticflickr.com/65535/51370642998_13241f9ece_o.png" alt="" />
+                    <img id="laptopmb" src="https://live.staticflickr.com/65535/51369653782_a6620cd83a_o.png" alt="" />
+                </div>
+                <div class="flexend">
+                    <div class="w100hmc">
+                        <h3>Free, open, simple</h3>
+                        <p>
+                            Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+                            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+                            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+                        </p>
+                    </div>
+                    <div class="w100hmc">
+                        <h3>Powerful tooling</h3>
+                        <p>
+                            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="ifooter">
+            <div><a href="#nogo"><img src="https://live.staticflickr.com/65535/51369654452_ea9dfcd165_o.png" alt="logo" /></a></div>
+            <div>
+                <h6>Product</h6>
+                <ul>
+                    <li><a href ="#nogo">Overview</a></li>
+                    <li><a href ="#nogo">Pricing</a></li>
+                    <li><a href ="#nogo">Marketplace</a></li>
+                    <li><a href ="#nogo">Features</a></li>
+                    <li><a href ="#nogo">Integrations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6>Company</h6>
+                <ul>
+                    <li><a href ="#nogo">About</a></li>
+                    <li><a href ="#nogo">Team</a></li>
+                    <li><a href ="#nogo">Blog</a></li>
+                    <li><a href ="#nogo">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6>Connect</h6>
+                <ul>
+                    <li><a href ="#nogo">Contact</a></li>
+                    <li><a href ="#nogo">Newsletter</a></li>
+                    <li><a href ="#nogo">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
