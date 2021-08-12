@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.show {
+  display: block;
+}
+.red {
+  color: red;
+}
+
+#link {
+  display: block;
+  padding-top: 50px;
+}
+
+#link :active {
+  color: red;
+}
+
+p {
+  padding-top: 50px;
+}
+</style>
+<body>
+<a href="javascript:void(0)" id="demo">Click here</a>
+<span hidden>teste</span>
+<a href="#" id="link">Click here</a>
+<p>Test your mouse on me!</p>
+<div hidden>test</div>
+<a href="#" id="link">Click here</a>
+<script>
+const p = document.querySelector("p");
+const div = document.querySelector("div");
+const span = document.querySelector("span");
+p.onmouseover = logMouseOver;
+p.onmouseout = logMouseOut;
+
+function logMouseOver() {
+  div.classList.add("show");
+}
+
+function logMouseOut() {
+  div.classList.remove("show");
+}
+
+document.getElementById('demo').onclick = function changeContent() {
+  span.classList.toggle("show")
+}
+</script>
+</body>
