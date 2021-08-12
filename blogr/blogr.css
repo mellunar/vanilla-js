@@ -100,6 +100,10 @@ nav li {
     margin-left: 10px;
 }
 
+.alhover {
+    transform: scaleY(-1);
+}
+
 .navitem {
     position: absolute;
     top: 110px;
@@ -377,6 +381,16 @@ footer ul {
         margin-top: -1em;
         margin-bottom: 1em;
     }
+    h2 {
+        font-size: 28px;
+    }    
+    h3 {
+        font-size: 28px;
+    }    
+    h4 {    
+        font-size: 20px;
+        font-weight: 400;
+    }
     #headerinner div {
         margin-top: 4em;
     }
@@ -389,5 +403,56 @@ footer ul {
     }
     #mobmenu {
         display: block;
+    }
+    .arrow-light {
+        background: url(https://live.staticflickr.com/65535/51370413776_f1e420a7c0_o.png);
+    }
+    main, footer {
+        text-align: center;
+    }
+    #future, #infinner, #last {
+        max-width: 100%;
+        margin: 80px auto;
+    }
+    #futurediv, #infinner, #lastdiv {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+    #futurediv div, #lastdiv div {
+        width: 100%;
+    }
+    #illustrationpc, #laptoppc {
+        display: none;
+    }
+    #illustrationmb, #laptopmb, #iphone {
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: auto;
+    }
+    #iphone {
+        margin: -210px auto auto auto;
+    }
+    .flexend {
+        order: 2;
+    }
+    .flexend div:nth-of-type(2) {
+        margin-top: 1.5em;
+    }
+    #infrastructure {
+        margin-bottom: auto;
+    }
+    #infinner h3 {
+        font-size: 40px;
+    }
+    #infinner div:nth-of-type(2) {
+        margin-bottom: 100px;
+    }
+    #ifooter div {
+        width: 100%;
+    }
+    #ifooter div:nth-last-child(-n+2) {
+        margin-top: 2em;
     }
 }
