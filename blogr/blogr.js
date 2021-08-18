@@ -1,51 +1,40 @@
-if (window.innerWidth < 769) {
-    document.addEventListener("DOMContentLoaded", function() {
-                document.querySelectorAll(".navlistm").forEach(element => element.addEventListener("click", function () {
-                nextNode = this.nextElementSibling.classList;
-                arrow = this.querySelector(".arrow-light").classList;
-                if(!nextNode.contains("show")){
-                	nextNode.add("show");
-                    arrow.add('alhover')
-                }
-                else{
-                    nextNode.remove("show");
-                    arrow.remove('alhover')
-                }
-            })
-        );
-        window.openClose = function openClose(x) {
-            x.classList.toggle("hmenuc");
-            document.querySelector("nav").classList.toggle("show")
+const ihamb = `
+    <a href="#nogo"><img alt="open menu" src="https://live.staticflickr.com/65535/51371421150_6182da9e62_o.png"</a>
+    `
+const iclose = `
+    <a href="#nogo"><img alt="close menu" src="https://live.staticflickr.com/65535/51371146539_43f6d40707_o.png"</a>
+    `
+
+document.addEventListener("DOMContentLoaded", function() {
+    const mobmenu = document.querySelector("#mobmenu");
+    const navlist = document.querySelector("#navlist");
+    const list = document.querySelectorAll(".categoryList");
+    const menuopened = document.querySelector("#menuopened");
+    mobmenu.innerHTML = ihamb;
+
+    function closemenu() {
+        navlist.setAttribute("data-menu", "closed");
+        mobmenu.innerHTML = ihamb;
+        menuopened.hidden = true
+    }
+    mobmenu.onclick = function () {
+        if (navlist.dataset.menu == "closed") {
+            navlist.setAttribute("data-menu", "opened");
+            mobmenu.innerHTML = iclose;
+            menuopened.hidden = false
+
         }
-        /*let list = document.querySelectorAll(".navlistd");
-        list.forEach((navlist, index) => {
-            navlist.onclick = (event) => {
-                list[index].querySelector('.navitem').classList.toggle('show')
-            }
-        })*/
-    });
-    
-}
- 
-else {
-    document.addEventListener("DOMContentLoaded", function() {
-        let list = document.querySelectorAll(".navlistd");
-        list.forEach((navlist, index) => {
-            let dlist = list[index].querySelector('.navitem').classList;
-            let arrow = list[index].querySelector('.arrow-light').classList;
-            navlist.onmouseover = (event) => {
-                dlist.add('show');
-                arrow.add('alhover')
-            };
-            navlist.onmouseout = (event) => {
-                dlist.remove('show');
-                arrow.remove('alhover')
-            };
-        })
-        /*
-        document.querySelectorAll(".navlist").forEach(element => element.addEventListener("mouseover", function() {this.nextElementSibling.classList.add("show")}));
-        document.querySelectorAll(".navlist").forEach(element => element.addEventListener("mouseout", function() {this.nextElementSibling.classList.remove("show")}));
-        */
-       
-    });
-}
+        else {
+            closemenu()
+        }
+    };
+    menuopened.onclick = function () {closemenu()};
+
+    list.forEach((categoryList, index) => {
+        let item = list[index].nextElementSibling;
+        let arrow = list[index].querySelector(".arrow-light");
+        categoryList.onclick = (event) => {
+        item.getAttribute("hidden") !== null ? item.hidden = false : item.hidden = true
+        item.getAttribute("hidden") !== null ? arrow.classList.remove("alhover") : arrow.classList.add("alhover")
+    }});
+});

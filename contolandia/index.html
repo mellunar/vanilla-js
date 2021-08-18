@@ -18,46 +18,47 @@
         <nav id="jstn" class="jstn tpbr">
             <div id="topnav" class="topnav">
                 <a href="#nogo" id="la"><div class="logo" id="logo"></div></a>
-                <div id="mobmenu"><a href="javascript:void(0)" onclick="mobilemenu()" role="button"><i class="bi bi-list" onclick="openClose(this)"></i></a></div>
-                <ul id="moblinks">
-                    <li class="dropdown">
-                        <a href="#nogo" role="button">Histórias</a>
-                        <div class="ddlist" hidden>
-                            <a href="#nogo">Aventura</a>
-                            <a href="#nogo">Drama</a>
-                            <a href="#nogo">Fantasia</a>
-                            <a href="#nogo">Ficção Científica</a>
-                            <a href="#nogo">Infantil</a>
-                            <a href="#nogo">Romance</a>
-                            <a href="#nogo">Suspense</a>
-                            <a href="#nogo">Visual</a>
-                        </div>
+                <button id="mobmenu"></button>
+                <ul id="navlinks" data-menu="closed">
+                    <li class="hassub">
+                        <a href="#nogo" class="categoryList" role="button">Histórias</a>
+                        <ul class="sublist" hidden>
+                            <li><a href="#nogo">Aventura</a></li>
+                            <li><a href="#nogo">Drama</a></li>
+                            <li><a href="#nogo">Fantasia</a></li>
+                            <li><a href="#nogo">Ficção Científica</a></li>
+                            <li><a href="#nogo">Infantil</a></li>
+                            <li><a href="#nogo">Romance</a></li>
+                            <li><a href="#nogo">Suspense</a></li>
+                            <li><a href="#nogo">Visual</a></li>
+                        </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#nogo">Concursos</a>
-                        <div class="ddlist" hidden>
-                            <a href="#nogo">Pena de Ouro</a>
-                            <a href="#nogo">Próximos</a>
-                            <a href="#nogo">Em andamento</a>
-                            <a href="#nogo">Encerrados</a>
-                        </div>
+                    <li class="hassub">
+                        <a href="#nogo" class="categoryList">Concursos</a>
+                        <ul class="sublist" hidden>
+                            <li><a href="#nogo">Pena de Ouro</a></li>
+                            <li><a href="#nogo">Próximos</a></li>
+                            <li><a href="#nogo">Em andamento</a></li>
+                            <li><a href="#nogo">Encerrados</a></li>
+                        </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#nogo" role="button">Comunidade</a>
-                        <div class="ddlist" hidden>
-                            <a href="#nogo">Chat</a>
-                            <a href="#nogo">Discord</a>
-                            <a href="#nogo">Fanfics</a>
-                            <a href="#nogo">Forum</a>
-                            <a href="#nogo">Grupo Facebook</a>
-                            <a href="#nogo">Poesia</a>
-                            <a href="#nogo">Reddit</a>
-                        </div>
+                    <li class="hassub">
+                        <a href="#nogo" class="categoryList" role="button">Comunidade</a>
+                        <ul class="sublist" hidden>
+                            <li><a href="#nogo">Chat</a></li>
+                            <li><a href="#nogo">Discord</a></li>
+                            <li><a href="#nogo">Fanfics</a></li>
+                            <li><a href="#nogo">Forum</a></li>
+                            <li><a href="#nogo">Grupo Facebook</a></li>
+                            <li><a href="#nogo">Poesia</a></li>
+                            <li><a href="#nogo">Reddit</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <a href="#nogo" id="btlogin">Login</a>
             </div>
         </nav>
+        <div id="menuopened" hidden></div>
         <section id="homebox">
             <div class="tta pdng" id="hometxt">
                 <h2>Milhares de histórias</h2>
@@ -230,7 +231,6 @@
             <div class="ftlc">
                 <a href="#nogo"><img src="https://live.staticflickr.com/65535/51370453003_5110c52b3a_o.png" alt="" class="ftlogo" /></a>
                 <div class="fticons"><a href="#nogo"><i class="bi bi-discord"></i></a><a href="#nogo"><i class="bi bi-facebook"></i></a><a href="#nogo"><i class="bi bi-reddit"></i></div></a>
-                <div id="mel"><a href="https://mellunar.github.io">Melissa Fernandes</a></div>
             </div>
             <div class="ftfb mla">
                 <h3>Histórias</h3>
@@ -260,6 +260,7 @@
                 <a href="#nogo">Poesia</a>
                 <a href="#nogo">Reddit</a>
             </div>
+            <div id="mel"><a href="https://mellunar.github.io">Melissa Fernandes</a></div>
         </div>   
     </footer>
 </body>

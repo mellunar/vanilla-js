@@ -19,45 +19,45 @@
             <div id="headercont">
                 <div id="headernav">
                     <a href="#nogo"><img src="https://live.staticflickr.com/65535/51369654452_ea9dfcd165_o.png" alt="logo" /></a>
-                    <nav>
-                        <ul>
-                            <li class="navlistd">
-                                <a class="navlistm" href="#nogo">Product<i class="arrow-light"></i></a>
-                                <ul class="navitem" hidden>
-                                    <li><a href ="#nogo">Overview</a></li>
-                                    <li><a href ="#nogo">Pricing</a></li>
-                                    <li><a href ="#nogo">Marketplace</a></li>
-                                    <li><a href ="#nogo">Features</a></li>
-                                    <li><a href ="#nogo">Integrations</a></li>
-                                </ul>
-                            </li>
-                            <li class="navlistd">
-                                <a class="navlistm" href="#nogo">Company<i class="arrow-light"></i></a>
-                                <ul class="navitem" hidden>
-                                    <li><a href ="#nogo">About</a></li>
-                                    <li><a href ="#nogo">Team</a></li>
-                                    <li><a href ="#nogo">Blog</a></li>
-                                    <li><a href ="#nogo">Careers</a></li>
-                                </ul>
-                            </li>
-                            <li class="navlistd" class="navlistd">
-                                <a class="navlistm" href="#nogo">Connect<i class="arrow-light"></i></a>
-                                <ul class="navitem" hidden>
-                                    <li><a href ="#nogo">Contact</a></li>
-                                    <li><a href ="#nogo">Newsletter</a></li>
-                                    <li><a href ="#nogo">LinkedIn</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
+                    <ul id="navlist" data-menu="closed">
+                        <li class="hassub">
+                            <a class="categoryList" href="#nogo">Product<i class="arrow-light"></i></a>
+                            <ul class="sublist" hidden>
+                                <li><a href ="#nogo">Overview</a></li>
+                                <li><a href ="#nogo">Pricing</a></li>
+                                <li><a href ="#nogo">Marketplace</a></li>
+                                <li><a href ="#nogo">Features</a></li>
+                                <li><a href ="#nogo">Integrations</a></li>
+                            </ul>
+                        </li>
+                        <li class="hassub">
+                            <a class="categoryList" href="#nogo">Company<i class="arrow-light"></i></a>
+                            <ul class="sublist" hidden>
+                                <li><a href ="#nogo">About</a></li>
+                                <li><a href ="#nogo">Team</a></li>
+                                <li><a href ="#nogo">Blog</a></li>
+                                <li><a href ="#nogo">Careers</a></li>
+                            </ul>
+                        </li>
+                        <li class="hassub">
+                            <a class="categoryList" href="#nogo">Connect<i class="arrow-light"></i></a>
+                            <ul class="sublist" hidden>
+                                <li><a href ="#nogo">Contact</a></li>
+                                <li><a href ="#nogo">Newsletter</a></li>
+                                <li><a href ="#nogo">LinkedIn</a></li>
+                            </ul>
+                        </li>
+                        <hr class="mobonly">
+                        <li class="mobonly"><a href="#nogo">Login</a></li>
+                        <li class="mobonly"><a href="#nogo" role="button" class="signup">Sign Up</a></li>
+                    </ul>
                     <div id="login">
                         <a href="#nogo">Login</a>
                         <a href="#nogo" role="button" class="whitebtn">Sign Up</a>
                     </div>
-                    <div id="mobmenu">
-                        <a href="#nogo"><i class="hmenuo" onclick="openClose(this)"></i></a>
-                    </div>
+                    <div id="mobmenu" class="mobonly"></div>
                 </div>
+                <div id="menuopened" hidden></div>
                 <div id="headertext">
                     <div id="headerinner">
                         <h1>A modern publishing platform</h1>
@@ -159,6 +159,7 @@
                 </ul>
             </div>
         </div>
+        <div id="mel"><a href="https://mellunar.github.io">Melissa Fernandes</a></div>
     </footer>
 </body>
 </html>
