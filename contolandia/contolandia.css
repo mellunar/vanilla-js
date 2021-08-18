@@ -138,6 +138,13 @@ header {
     .tnscroll .ddls a:hover {
         color: #ffab00 !important;
     }
+    .booklist a:hover {
+        border-color: #908da6;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+    #outbox {
+    display: none;
+    }
 }
 
 .tnscroll .ddls a {
@@ -251,7 +258,7 @@ main {
     display: flex;
 }
 
-.booklist a {
+.booklist a:not(.linkboxfill), .imghvr {
     display: flex;
     flex-direction: column;
     border: 1px solid #E0E0E0;
@@ -262,10 +269,6 @@ main {
     height: auto;    
 }
 
-.booklist a:hover {
-    border-color: #908da6;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-}
 
 .bldest {
     width: 25%;
@@ -304,11 +307,15 @@ main {
     display: block;
 }
 
+.linkboxfill {
+    z-index: 20;
+}
+
 .imghvr {
     position: relative;
 }
 
-.txtbox {
+.linkboxfill, .txtbox, #outbox {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -316,6 +323,9 @@ main {
     right: 0;
     height: 100%;
     width: 100%;
+}
+
+.txtbox {
     opacity: 0;
     transition: .5s ease;
     background-color: rgba(0,0,0,0.75);    
@@ -397,6 +407,24 @@ footer h3 {
 }
 
 @media screen and (max-width: 1023px) {
+    [data-hover=false]{
+        opacity: 0;
+    }
+    [data-hover=true]{
+        opacity: 1;
+    }
+    [data-hidden=true]{
+        display: none;
+    }
+    [data-hidden=false]{
+        display: block;
+    }
+    #outbox[data-hidden=true]{
+        display: none;
+    }
+    #outbox[data-hidden=false]{
+        display: block;
+    }
     #navlinks[data-menu="closed"] {
         display: none;
     }
@@ -446,9 +474,6 @@ footer h3 {
         top: 65px;
         left: 0;
         right: 0;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
         background-color: #363449;
         box-shadow: 0 2px 10px 3px rgba(0,0,0,.1);
         padding: 0.4rem;
@@ -509,6 +534,11 @@ footer h3 {
     .ftfb {
         width: 100%;
         text-align: center;
+    }
+    #outbox {    
+        z-index: 15;
+        background-color: transparent;
+        position: fixed !important;
     }
 }
 

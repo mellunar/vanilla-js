@@ -30,6 +30,8 @@ window.onload = function () {
     const navlist = document.querySelector("#navlinks");
     const list = document.querySelectorAll(".categoryList");
     const menuopened = document.querySelector("#menuopened");
+    const imghvr = document.querySelectorAll(".imghvr");
+    const outbox = document.querySelector("#outbox");
     mobmenu.innerHTML = ihamb;
 
     function closemenu() {
@@ -57,6 +59,37 @@ window.onload = function () {
         categoryList.onclick = (event) => {
         item.getAttribute("hidden") !== null ? item.hidden = false : item.hidden = true
     }});
+
+    if (window.innerWidth < 1024) {
+        imghvr.forEach((hover, index) => {
+            const txtbox = imghvr[index].querySelector('.txtbox');
+            const linkfill = imghvr[index].querySelector('.linkboxfill');
+
+            function imageHover(att1, att2){
+            txtbox.setAttribute("data-hover", att1);
+            linkfill.setAttribute("data-hidden", att2);
+            outbox.setAttribute("data-hidden", att2);
+            }
+
+            hover.onclick = (event) => {
+            imageHover("true","false");
+            if (txtbox.dataset.hover == "true") {void(0)};
+            };
+
+            function closeHovera(element){
+                element.setAttribute("data-hidden", "true")
+            }
+            function closeHoverb(element){
+                element.setAttribute("data-hover", "false")
+            }
+
+            outbox.onclick = function() {
+                document.querySelectorAll(".txtbox").forEach(closeHoverb);
+                document.querySelectorAll(".linkboxfill").forEach(closeHovera);
+                closeHovera(outbox);
+            }
+            })
+    }
 };
 
 document.addEventListener("DOMContentLoaded", function() {
