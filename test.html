@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <style>
-* {
+* {/*
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;*/
     font-size: 25px;
-}
-.show {
-  display: block;
-}
-.red {
-  color: red;
-}
-
-#link {
-  display: block;
-  padding-top: 50px;
-}
-
-#link:active {
-  color: green;
-}
-
-p {
-  padding-top: 50px;
 }
 </style>
 <body>
-<a href="javascript:void(0)" id="demo">Click here</a>
-<span hidden>teste</span>
-<a href="#" id="link">Click here</a>
-<p>Test your mouse on me!</p>
-<div hidden>test</div>
+
 <script>
-const p = document.querySelector("p");
-const div = document.querySelector("div");
-const span = document.querySelector("span");
-p.onmouseover = logMouseOver;
-p.onmouseout = logMouseOut;
+//github.com/Ankit-29
 
-function logMouseOver() {
-  div.classList.add("show");
+getBrowser = () => {
+    const userAgent = navigator.userAgent;
+    let browser = undefined;
+    // Detect browser name
+    browser = (/ucbrowser/i).test(userAgent) ? 'UCBrowser' : browser;
+    browser = (/edg/i).test(userAgent) ? 'Edge' : browser;
+    browser = (/googlebot/i).test(userAgent) ? 'GoogleBot' : browser;
+    browser = (/chromium/i).test(userAgent) ? 'Chromium' : browser;
+    browser = (/firefox|fxios/i).test(userAgent) && !(/seamonkey/i).test(userAgent) ? 'Firefox' : browser;
+    browser = (/; msie|trident/i).test(userAgent) && !(/ucbrowser/i).test(userAgent) ? 'IE' : browser;
+    browser = (/chrome|crios/i).test(userAgent) && !(/opr|opera|chromium|edg|ucbrowser|googlebot/i).test(userAgent) ? 'Chrome' : browser;;
+    browser = (/safari/i).test(userAgent) && !(/chromium|edg|ucbrowser|chrome|crios|opr|opera|fxios|firefox/i).test(userAgent) ? 'Safari' : browser;
+    browser = (/opr|opera/i).test(userAgent) ? 'Opera' : browser;
+
+    // detect browser version
+    switch (browser) {
+        case 'UCBrowser': return `${browserVersion(userAgent,/(ucbrowser)\/([\d\.]+)/i)} ${browser}`;
+        case 'Edge': return `${browserVersion(userAgent,/(edge|edga|edgios|edg)\/([\d\.]+)/i)} ${browser}`;
+        case 'GoogleBot': return `${browserVersion(userAgent,/(googlebot)\/([\d\.]+)/i)} ${browser}`;
+        case 'Chromium': return `${browserVersion(userAgent,/(chromium)\/([\d\.]+)/i)} ${browser}`;
+        case 'Firefox': return `${browserVersion(userAgent,/(firefox|fxios)\/([\d\.]+)/i)} ${browser} `;
+        case 'Chrome': return `${browserVersion(userAgent,/(chrome|crios)\/([\d\.]+)/i)} ${browser}`;
+        case 'Safari': return `${browser} ${browserVersion(userAgent,/(safari)\/([\d\.]+)/i)}`;
+        case 'Opera': return `${browserVersion(userAgent,/(opera|opr)\/([\d\.]+)/i)} ${browser}`;
+        case 'IE': const version = browserVersion(userAgent,/(trident)\/([\d\.]+)/i);
+            // IE version is mapped using trident version 
+            // IE/8.0 = Trident/4.0, IE/9.0 = Trident/5.0
+            return version ? `${parseFloat(version) + 4.0} ${browser}` : `7.0 ${browser}`;
+        default: return `unknown/0.0.0.0`;
+    }
+}
+browserVersion = (userAgent,regex) => {
+    return userAgent.match(regex) ? userAgent.match(regex)[2] : null;
 }
 
-function logMouseOut() {
-  div.classList.remove("show");
+//Compatibility checker - mellunar
+
+const bt = getBrowser();
+const bv = parseFloat(bt);
+
+const bChrome = bt.includes("Chrome");
+const bEdge = bt.includes("Edge");
+const bFirefox = bt.includes("Firefox");
+const bOpera = bt.includes("Opera");
+const bSafari = bt.includes("Safari");
+
+const bChrome88 = bChrome && bv > 88;
+const bEdge88 = bEdge && bv > 88;
+const bFirefox89 = bFirefox && bv > 89;
+const bOpera74 = bOpera && bv > 74;
+const bSafari15 = bSafari && bv > 15;
+
+function checkComp() {
+    if(bChrome){if(bChrome88){return true} else{return false}}
+    if(bEdge){if(bEdge88){return true} else{return false}}
+    if(bFirefox){if(bFirefox89){return true} else{return false}}
+    if(bOpera){if(bOpera74){return true} else{return false}}
+    if(bSafari){if(bSafari15){return true} else{return false}}
 }
 
-document.getElementById('demo').onclick = function changeContent() {
-  span.classList.toggle("show")
-}
+document.write(checkComp());
 </script>
 </body>
