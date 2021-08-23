@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let text = deck[card].texto;
         tar.ontransitionend = () => {
             tar.innerHTML = `
-            <img class="tcard" alt="${card}+" "+${title}" src="${url}">
+            <img class="tcard" alt="${card} ${title}" src="${url}">
             <h2>${title}</h2>
             <p>${text}</p>
             <a href="#nogo" class="catbtn mbr">Aprenda tarot</a>
