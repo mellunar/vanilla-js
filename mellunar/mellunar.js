@@ -39,19 +39,41 @@ document.addEventListener("DOMContentLoaded", function() {
     const navlist = document.querySelector("#navlist");
     const mml = document.querySelectorAll(".moreless");
     const hassub = document.querySelectorAll(".hassub");
+    const menuopened = document.getElementById("menuopened");
     mobmenu.innerHTML = ihamb;
-    mobmenu.onclick = function () {
-        if (navlist.dataset.menu == "close") {
-            navlist.setAttribute("data-menu", "open");
-            mobmenu.innerHTML = iclose;
+
+    function bgoc() {
+        if (navlist.dataset.menu == "opened") {
+            menuopened.hidden = false;
             body.classList.add("mmopened");
         }
         else {
-            navlist.setAttribute("data-menu", "close");
-            mobmenu.innerHTML = ihamb;
+            menuopened.hidden = true;
             body.classList.remove("mmopened");
         }
+    };
+
+    function closeMobMenu() {
+        navlist.setAttribute("data-menu", "closed");
+        mobmenu.innerHTML = ihamb;
+        menuopened.hidden = true;
+        body.classList.remove("mmopened");
+        bgoc();
+    };
+
+    mobmenu.onclick = function() {
+        if (navlist.dataset.menu == "closed") {
+            navlist.setAttribute("data-menu", "opened");
+            mobmenu.innerHTML = iclose;
+            bgoc();
+        }
+        else {
+            closeMobMenu();
+        }
     }
+
+    menuopened.onclick = () => {closeMobMenu()};
+    window.onresize = () => {if(window.innerWidth > 1023){closeMobMenu()}};
 
     mml.forEach((el) => {el.innerHTML = more});
     hassub.forEach((sub, index) => {
@@ -169,10 +191,10 @@ document.addEventListener("DOMContentLoaded", function() {
         let text = deck[card].texto;
         tar.ontransitionend = () => {
             tar.innerHTML = `
-            <img class="tcard" alt="${title}" src="${url}">
+            <img class="tcard" alt="${card}+" "+${title}" src="${url}">
             <h2>${title}</h2>
             <p>${text}</p>
-            <a href="#nogo" class="catbtn">Aprenda tarot</a>
+            <a href="#nogo" class="catbtn mbr">Aprenda tarot</a>
             `
             tar.classList.replace("op0","op1");
         }        
