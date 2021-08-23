@@ -13,7 +13,7 @@
     <nav id="mainnav">
         <div id="topnav">
             <a id="logo" href="#nogo"><img alt="logo melunar" src="https://live.staticflickr.com/65535/51382353382_d140298e2d_o.png" /></a>
-            <ul id="navlist" data-menu="close">
+            <ul id="navlist" data-menu="closed">
                 <li>
                     <a class="hassub" href="#" role="button">Acessórios <span class="mobonly moreless"></span></a>
                     <ul class="mobonly submenu">
@@ -61,11 +61,14 @@
                 </li>
             </ul>
             <button id="mobmenu"></button>
-            <button id="shopbag"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+            <button id="shopbag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z"/>
-              </svg></button>
+                </svg>
+            </button>
         </div>
     </nav>
+    <div id="menuopened" hidden></div>
     <header>
         <section class="flexpad">
             <div id="slider">
@@ -74,24 +77,24 @@
                     <div class="scslides"></a></div>
                     <div class="scslides"></a></div>
                 </div>
-                <article class="slide" data-slactive=0>
-                    <img class="imgfit" alt="imagem de abóboras e velas no chão natural à noite" src="https://live.staticflickr.com/65535/51389148659_b1b15302ae_o.jpg"/>
+                <article class="slide imageres" data-slactive=0>
+                    <span class="sronly">imagem de abóboras e velas no chão natural à noite</span>
                     <div class="txtslider">
                         <h2>Vela do bosque</h2>
                         Sinta-se como se estivesse ao ar livre <span class="ir"></span>
                     </div>
                     <a href="#nogo" class="linkfill"></a>
                 </article>
-                <article class="slide" data-slactive=0>
-                    <img class="imgfit" alt="imagem de uma mulher em uma praia mostrando a tatuagem no braço direito" src="https://live.staticflickr.com/65535/51389148654_d27e95039a_o.jpg"/>
+                <article class="slide imageres" data-slactive=0>
+                    <span class="sronly">imagem de uma mulher em uma praia mostrando a tatuagem no braço direito</span>
                     <div class="txtslider">
                         <h2>Guia ilustrado de símbolos</h2>
                         Encontre a inspiração para sua próxima tatuagem <span class="ir"></span>
                     </div>
                     <a href="#nogo" class="linkfill"></a>           
                 </article>
-                <article class="slide" data-slactive=0>
-                    <img class="imgfit" alt="imagem de uma vela em uma lanterna de vidro em cima de um livro" src="https://live.staticflickr.com/65535/51387652122_9bf286353d_o.jpg"/>
+                <article class="slide imageres" data-slactive=0>
+                    <span class="sronly">imagem de uma vela em uma lanterna de vidro em cima de um livro</span>
                     <div class="txtslider">
                         <h2>Lanterna moderna</h2>
                         Una a iluminação à vela com a modernidade sem perder a elegância <span class="ir"></span>
@@ -125,6 +128,7 @@
                     <li><a href="#nogo">Caneta Pena com Tinta</a></li>
                     <li><a href="#nogo">Colar Medalhão</a></li>
                 </ul>
+                <a href="#nogo" class="linkfill mobonly"></a>
             </div>
             <div>
                 <img class="pclt pcmicon" alt="ícone de cartas" src="https://i.imgur.com/UscXXFZ.png">
@@ -134,6 +138,7 @@
                     <li><a href="#nogo">Divine Feminine</a></li>
                     <li><a href="#nogo">Soul Cards</a></li>
                 </ul>
+                <a href="#nogo" class="linkfill mobonly"></a>
             </div>
             <div>
                 <img class="pclt pcmicon" alt="ícone de bola de cristal" src="https://i.imgur.com/zSmlKCe.png">
@@ -143,6 +148,7 @@
                     <li><a href="#nogo">Quartzo</a></li>
                     <li><a href="#nogo">Obsidiana</a></li>
                 </ul>
+                <a href="#nogo" class="linkfill mobonly"></a>
             </div>
             <div>
                 <img class="pclt pcmicon" alt="ícone de livro" src="https://i.imgur.com/KEumEeK.png">
@@ -152,6 +158,7 @@
                     <li><a href="#nogo">Moon Magic</a></li>
                     <li><a href="#nogo">The Green Witch</a></li>
                 </ul>
+                <a href="#nogo" class="linkfill mobonly"></a>
             </div>
             <div>
                 <img class="pclt pcmicon" alt="ícone de vela" src="https://i.imgur.com/LCKwiEV.png">
@@ -161,15 +168,16 @@
                     <li><a href="#nogo">Lanterna Moderna</a></li>
                     <li><a href="#nogo">Vela do Bosque</a></li>
                 </ul>
+                <a href="#nogo" class="linkfill mobonly"></a>
             </div>
         </div>
-        <div class="flexbox">
+        <div class="flexbox mfc">
             <div class="flexbox flexcol">
                 <section id="tarot" class="categories grid griditem">
                     <div id="tar" class="flexsec">
                         <img class="tcard" src="https://i.imgur.com/w54CIMt.jpg">
                         <h2>Prévia de Deck</h2>
-                        <p>Se interessou pelo Anima Mundi? Clique no botão abaixo e veja uma de suas cartas em ação.</p>
+                        <p class="mbr">Se interessou pelo Anima Mundi? Clique no botão abaixo e veja uma de suas cartas em ação.</p>
                         <button id="tbtn">Escolha uma carta</button>
                     </div>
                 </section>
@@ -183,8 +191,8 @@
                     <a href="#nogo" class="linkfill"></a>
                 </section>
             </div>
-            <section class="categories grid griditem bigitem relative">
-                <img class="imgcover" alt="" src="https://live.staticflickr.com/65535/51396916310_19c345ffb4_o.jpg">
+            <section id="ar12" class="categories grid griditem bigitem relative imageres">
+                <span class="sronly"></span>
                 <div class="saletitle saletitletop">
                     <h6>Cristais</h6>
                     <h2>Quartzo</h2>
@@ -192,13 +200,20 @@
                 </div>
                 <div class="saletitle saletitlebot">
                     <h6>Cristais</h6>
-                    <h2>Quartzo</h2>
-                    <p class="subtitle">Lapidado e disponível em vários tamanhos <span class="ir"></span></p>
+                    <h2>Topázio Azul</h2>
+                    <p class="subtitle">Bruto e disponível em vários tamanhos <span class="ir"></span></p>
                 </div>
                 <a href="#nogo" class="linkfill"></a>
             </section>
         </div>
-        
+        <div id="media" class="categories griditem">
+            <h6>Melunar na mídia</h6>
+            <div>
+                <img alt="" src="https://i.imgur.com/3LjBvRu.png">
+                <img alt="" src="https://i.imgur.com/2hn4qRz.png">
+                <img alt="" src="https://i.imgur.com/nJ62zpP.png">
+            </div>
+        </div>
         <div class="flexbox">
             <section class="categories grid griditem relative imgadj fpi">
                 <img class="imgcover" alt="imagem do livro Moon Magic" src="https://live.staticflickr.com/65535/51392227387_8febe08ff0_o.jpg" />
