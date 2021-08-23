@@ -488,6 +488,10 @@ input[type=email] {
     .imgfit {
         height: 100%;
     }
+    .imgcover {
+        width: -webkit-calc(100vw - 2rem);
+        height: -webkit-auto;
+    }
     .flexcol {
         width: 100%;
     }
