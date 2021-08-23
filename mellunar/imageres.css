@@ -1,0 +1,18 @@
+.imageres {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+#slider article:nth-of-type(1) {
+    background: url(https://live.staticflickr.com/65535/51389148659_b1b15302ae_o.jpg);
+}
+#slider article:nth-of-type(2) {
+    background: url(https://live.staticflickr.com/65535/51389148654_d27e95039a_o.jpg);
+}
+#slider article:nth-of-type(3) {
+    background: url(https://live.staticflickr.com/65535/51387652122_9bf286353d_o.jpg);
+}
+#ar12 {
+    background: url(https://live.staticflickr.com/65535/51396916310_19c345ffb4_o.jpg);
+}
