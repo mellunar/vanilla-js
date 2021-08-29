@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="https://bn02pap001files.storage.live.com/y4m-5CUp1N9NnXXvMABJygcC2azYtVk8bM8rOWiq2kMVVZRgSL-O80YOkA6PLSkWRlksLTinJKMktwKB2wiFRwab8QeARGilhfd2AhdE1QvYbPYMecLgqMjK4QJjzIjob4PyDwrY0ZsMUwjzNWL9ST0YEj__xGt83yP1Bd71y6uoz6y2JzYaun7q1A5g7-s7M5i?width=32&height=32&cropmode=none" type="image/x-icon" />
+    <link rel='stylesheet' href='foxhub.css'>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="foxhub.js"></script>
+    <script src="content.js"></script>
+    <script src="live.js"></script>
+    <title>Fox Hub</title>
+</head>
+<body>
+    <nav id="mainnav">
+        <div id="tn">
+            <button id="mobmenu"></button>
+            <a id="logo" href="#"><img alt="logo" src="https://bn02pap001files.storage.live.com/y4mCeqNn_1SQxfw3Au7hi-sAvPXigGXMKGKHULR_FXRocQGje2B2nfKha5VEi_wCD-8u3OZfcBAevdn1imsrAgrtjSSylMNIhhvxRllPUV2LuQYdBz-dDwLNKt1Mm4mBWP7gw1jAPIfIY0Vu7SVpTB-7ZVyU4T6RCTHBLp8_AKQDYH8crJOxlF5N7wXhH04hoPb?width=427&height=100&cropmode=none"></a>
+            <ul id="navlist" data-menu="closed">
+                <li><a href="#">Canais</a></li>
+                <li><a href="#">Programas</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Favoritos</a></li>
+            </ul>
+            <div id="rightarea">
+                <div id="searchicon" class="iconcir">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </div>
+                <div id="userbox">
+                    <div id="usericon" class="iconcir">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                    </div>
+                    <div id="chevron" class="pconly"></div>
+                </div>
+            </div>
+            <div id="loginbox" data-login="closed">
+                <a class="foxbtn extbtn logbtn" href="#">Entrar</a>
+                <a class="foxbtn extbtn etcbtn" href="#">Entrar com Operadora</a>
+                <div>Ainda não é assinante?</div>
+                <a class="foxbtn extbtn etcbtn" href="#">Seja assinante</a>
+            </div>
+        </div>
+    </nav>
+    <div id="menuopened" hidden></div>
+    <header>
+        <div id="slider" class="mainslider">
+            <div id="pagination">
+                <!-- -->
+            </div>
+            <div class="ctrbtnl pconly"></div>
+            <div class="ctrbtnr pconly"></div>
+            <div class="slidercont transition swiper-wrapper">
+                
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h4>Canais</h4>
+            <div id="carchannel" class="carousel">
+                <div class="ctrbtnl carcl pconly"></div>
+                <div class="ctrbtnr carcr pconly"></div>
+                <div class="carcont swiper-wrapper">
+                    <!-- -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <h4>Ao Vivo</h4>
+            <div id="carlive" class="carousel">
+                <div class="ctrbtnl carcl pconly carf carfl"></div>
+                <div class="ctrbtnr carcr pconly carf carfl"></div>
+                <div class="carcont swiper-wrapper">
+                    <!-- -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <h4>Novidades em séries</h4>
+            <div id="carnovserie" class="carousel">
+                <div class="ctrbtnl carcl pconly carf carfl"></div>
+                <div class="ctrbtnr carcr pconly carf carfl"></div>
+                <div class="carcont swiper-wrapper">
+                    <!-- -->
+                </div>
+                <div class="pagination pconly">
+                    <!-- -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <h4>Novidades em filmes</h4>
+            <div id="carnovfilme" class="carousel">
+                <div class="ctrbtnl carcl pconly carf carfl"></div>
+                <div class="ctrbtnr carcr pconly carf carfl"></div>
+                <div class="carcont swiper-wrapper">
+                    <!-- -->
+                </div>
+                <div class="pagination pconly">
+                    <!-- -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <h4>Últimos episódios</h4>
+            <div id="carnoveps" class="carousel">
+                <div class="ctrbtnl carcl pconly carf carfl"></div>
+                <div class="ctrbtnr carcr pconly carf carfl"></div>
+                <div class="carcont swiper-wrapper">
+                    <!-- -->
+                </div>
+            </div>
+        </section>
+        <section class="banner">
+            <img class="pconly" alt="Star Trek: Lower Decks - Novos episódios - sextas às 21h" src="https://bn02pap001files.storage.live.com/y4mDJSTQSM0Uu82Tu3NTMoP0LuVhz3aQgZXIG9mQ_fDpsmPqD3SZykzFa-v_jK00lwAVB1TtKUo1eKazAKFTwyBQ7Y2poHZDdz2dGcM6ZBtXuNQdR7SgjtDmpn_ZLAfMYCDTu6SKmAeXGaf3lAOeLXnn6KrH-VwuwyyoHwKF7zKMxgWCiXmeO7FS4-lSdH1xn8i?width=1920&height=250&cropmode=none">
+            <img class="mobonly tablet" alt="Star Trek: Lower Decks - Novos episódios - sextas às 21h" src="https://bn02pap001files.storage.live.com/y4mbQq8eX9KluYQWJ3LWCjlFSjAmododvsnUecbIkIvh6o6AIR-JgMGh1DiOmyzL6a2oHwn7OjtBpIJWK21aRA_gepCMmyNnNT7qZ9tD8hUZB0SsRmTOgtkoAXNZd6ApDlh-MATx3Vpk8T0NCuqEXFdaVL6OHnSJ_njc1QWlH-NhbV-Saj2Cs9m2uax0PXf92ZC?width=960&height=500&cropmode=none">
+            <a href="#nogo" class="linkfill"></a>
+        </section>
+        <section>
+            <h4>Especial Star Trek</h4>
+            <div id="carstartrek" class="carousel">
+                <div class="ctrbtnl carcl pconly carf carfl"></div>
+                <div class="ctrbtnr carcr pconly carf carfl"></div>
+                <div class="carcont swiper-wrapper">
+                    <!-- -->
+                </div>
+                <div class="pagination pconly">
+                    <!-- -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <h4>Episódios em destaque</h4>
+            <div id="carepisdest" class="carousel">
+                <div class="ctrbtnl carcl pconly carf carfl"></div>
+                <div class="ctrbtnr carcr pconly carf carfl"></div>
+                <div class="carcont swiper-wrapper">
+                    <!-- -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <h4>Filmes em destaque</h4>
+            <div id="cardestfilme" class="carousel">
+                <div class="ctrbtnl carcl pconly carf carfl"></div>
+                <div class="ctrbtnr carcr pconly carf carfl"></div>
+                <div class="carcont swiper-wrapper">
+                    <!-- -->
+                </div>
+                <div class="pagination pconly">
+                    <!-- -->
+                </div>
+            </div>
+        </section>
+        <div class="pconly sidecont sidegrad sidegl" aria-hidden="true"></div>
+        <div class="pconly sidecont sidegrad sidegr" aria-hidden="true"></div>
+    </main>
+    <footer>
+        <div id="flogo">
+            <a href="#"><img alt="logo" src="https://bn02pap001files.storage.live.com/y4mCeqNn_1SQxfw3Au7hi-sAvPXigGXMKGKHULR_FXRocQGje2B2nfKha5VEi_wCD-8u3OZfcBAevdn1imsrAgrtjSSylMNIhhvxRllPUV2LuQYdBz-dDwLNKt1Mm4mBWP7gw1jAPIfIY0Vu7SVpTB-7ZVyU4T6RCTHBLp8_AKQDYH8crJOxlF5N7wXhH04hoPb?width=427&height=100&cropmode=none"></a>
+        </div>
+        <div id="fbox">
+            <div class="fdiv">
+                <div>
+                    <h5>Canais</h5>
+                    <ul>
+                        <li><a href="#">Fox Hub</a></li>
+                        <li><a href="#">Zoo TV</a></li>
+                        <li><a href="#">Liva</a></li>
+                        <li><a href="#">Earth 2.0</a></li>
+                        <li><a href="#">Utosia</a></li>
+                        <li><a href="#">Kanba</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fdiv">
+                <div>
+                    <h5>Parcerias</h5>
+                    <ul>
+                        <li><a href="#">Apple TV</a></li>
+                        <li><a href="#">Disney+</a></li>
+                        <li><a href="#">HBO Max</a></li>
+                        <li><a href="#">Netflix</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fdiv">
+                <div>
+                    <h5>Redes Sociais</h5>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">Reddit</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fdiv">
+                <div>
+                    <h5>Informação</h5>
+                    <ul>
+                        <li><a href="#">Exibir títulos em português</a></li>
+                        <li><a href="#">Audiodescrição</a></li>
+                        <li><a href="#">Classificação etária</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Sobre a Fox Hub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="mel"><a href="https://mellunar.github.io">Melissa Fernandes</a></div>
+    </footer>
+</body>
+</html>
