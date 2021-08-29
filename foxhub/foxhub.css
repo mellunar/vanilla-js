@@ -93,14 +93,20 @@ h6 {
     cursor: auto;
 }
 
+[data-scroll="up"]{
+    top: 0px;
+}
+[data-scroll="down"]{
+    top: -70px;
+}
 
 #mainnav {
-    position: fixed;
-    top: 0;
+    position: fixed;    
     left: 0;
     width: 100%;
     height: 70px;
     z-index: 999;
+    transition: top 200ms;
 }
 #tn {
     position: relative;
@@ -875,6 +881,9 @@ footer h5 {
 }
 
 @media screen and (max-width: 799px) {
+    [data-scroll="down"]{
+        top: -60px;
+    }
     .pconly {
         display: none;
     }

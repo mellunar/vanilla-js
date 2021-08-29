@@ -41,6 +41,7 @@ const playico = `<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" 
 
 document.addEventListener("DOMContentLoaded", function() {
     const body = document.querySelector("body"),
+    mainnav = document.querySelector("#mainnav"),
     mobmenu = document.querySelector("#mobmenu"),
     chevron = document.querySelector("#chevron"),
     loginbox = document.querySelector("#loginbox"),
@@ -52,6 +53,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     ctrbtnl.forEach((e)=>{e.innerHTML=chevl});
     ctrbtnr.forEach((e)=>{e.innerHTML=chevr});
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = () => {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            mainnav.setAttribute("data-scroll","up");
+        } else {
+            mainnav.setAttribute("data-scroll","down");
+        }
+        prevScrollpos = currentScrollPos;
+    } 
 
     function bgoc() {
         if (navlist.dataset.menu == "opened" || loginbox.dataset.login == "opened") {
