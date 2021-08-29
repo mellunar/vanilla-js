@@ -605,6 +605,92 @@ footer h5 {
 }
 
 
+.livechan::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 5px;
+}
+.livechan:hover::before {
+    content: "";
+    background-color: rgba(255,255,255,.025);
+}
+
+.posterbox, .epshover {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+    color: #fff;
+    opacity: 0;
+    text-shadow: 0px 0px 2px #000;
+}
+.posterbox {        
+    background-color: rgba(0,0,0,0.9);
+}
+.poster:hover .posterbox {
+    opacity: 1;
+}
+.poster:hover .poster img {
+    opacity: .5;
+}
+.postertxt {
+    padding: 1rem;
+}
+.postertxt h6 {
+    font-size: 14px;
+    font-weight: 400;
+}
+.showinfo {
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+}
+.showinfo *:not(:last-child) {
+    margin-right: 1rem;
+}
+.cetaria {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.cel, .ceL {
+    background: #029c44;
+}
+.ce10 {        
+    background: #008cd1;
+}
+.ce12 {        
+    background: #faba01;
+}
+.ce14 {        
+    background: #f17511;
+}
+.ce16 {        
+    background: #de121b;
+}
+.ce18 {        
+    background: #000;
+}
+.showdesc {
+    margin-top: .5rem;
+}
+
+.epshover {
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.episode:hover .epshover {
+    opacity: 1;
+}
 @media screen and (min-width: 1024px) {
     [data-login=closed] {        
         max-height: 0px;
@@ -667,93 +753,6 @@ footer h5 {
 
     main section:not(:first-child) {
         padding-top: 1.5vw;
-    }
-
-    .livechan::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 5px;
-    }
-    .livechan:hover::before {
-        content: "";
-        background-color: rgba(255,255,255,.025);
-    }
-
-    .posterbox, .epshover {
-        position: absolute;
-        inset: 0;
-        height: 100%;
-        width: 100%;
-        transition: .5s ease;
-        color: #fff;
-        opacity: 0;
-        text-shadow: 0px 0px 2px #000;
-    }
-    .posterbox {        
-        background-color: rgba(0,0,0,0.9);
-    }
-    .poster:hover .posterbox {
-        opacity: 1;
-    }
-    .poster:hover .poster img {
-        opacity: .5;
-    }
-    .postertxt {
-        padding: 1rem;
-    }
-    .postertxt h6 {
-        font-size: 14px;
-        font-weight: 400;
-    }
-    .showinfo {
-        margin-top: .5rem;
-        display: flex;
-        align-items: center;
-    }
-    .showinfo *:not(:last-child) {
-        margin-right: 1rem;
-    }
-    .cetaria {
-        display: flex;
-        width: 20px;
-        height: 20px;
-        border-radius: 3px;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
-    }
-    .cel, .ceL {
-        background: #029c44;
-    }
-    .ce10 {        
-        background: #008cd1;
-    }
-    .ce12 {        
-        background: #faba01;
-    }
-    .ce14 {        
-        background: #f17511;
-    }
-    .ce16 {        
-        background: #de121b;
-    }
-    .ce18 {        
-        background: #000;
-    }
-    .showdesc {
-        margin-top: .5rem;
-    }
-
-    .epshover {
-        background-color: rgba(0,0,0,0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-    }
-    .episode:hover .epshover {
-        opacity: 1;
     }
 }
 
@@ -877,6 +876,18 @@ footer h5 {
     .fdiv {
         width: 25%;
         text-align: center;
+    }
+    .postertxt h5 {
+        text-align: center;
+    }
+    .showinfo {
+        flex-direction: column;
+    }
+    .showinfo * {
+        margin-right: 0 !important;
+    }
+    .showinfo *:not(:first-child) {
+        margin-top: 1rem;
     }
 }
 

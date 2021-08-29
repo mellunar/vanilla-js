@@ -262,13 +262,13 @@ document.addEventListener("DOMContentLoaded", function() {
         node.classList.add("poster");
         node.innerHTML = `
             <img alt="${novseries[i].titulo}" src="${novseries[i].img}">
-            <div class="posterbox pconly">
+            <div class="posterbox">
                 <div class="postertxt">
                     <h5>${novseries[i].titulo}</h5>
                     <div class="showinfo">
                         <h6>${novseries[i].ano}</h6><h6>${novseries[i].tamanho}</h6><div class="cetaria ce${novseries[i].idade}">${novseries[i].idade}</div>
                     </div>
-                    <p class="showdesc">${novseries[i].desc}</p>
+                    <p class="showdesc pconly">${novseries[i].desc}</p>
                 </div>
             </div>
             <a href="#nogo" class="linkfill"></a>
@@ -316,13 +316,13 @@ document.addEventListener("DOMContentLoaded", function() {
         node.classList.add("poster");
         node.innerHTML = `
             <img alt="${novfilmes[i].titulo}" src="${novfilmes[i].img}">
-            <div class="posterbox pconly">
+            <div class="posterbox">
                 <div class="postertxt">
                     <h5>${novfilmes[i].titulo}</h5>
                     <div class="showinfo">
                         <h6>${novfilmes[i].ano}</h6><h6>${novfilmes[i].tamanho}</h6><div class="cetaria ce${novfilmes[i].idade}">${novfilmes[i].idade}</div>
                     </div>
-                    <p class="showdesc">${novfilmes[i].desc}</p>
+                    <p class="showdesc pconly">${novfilmes[i].desc}</p>
                 </div>
             </div>
             <a href="#nogo" class="linkfill"></a>
@@ -372,7 +372,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="epsic">
                 <img alt="${ultepis[i].titulo} ${ultepis[i].ep}" src="${ultepis[i].img}">
                 <div class="epdur">${ultepis[i].dur}</div>
-                <div class="pconly epshover" aria-hidden="true"></div>
+                <div class="epshover" aria-hidden="true"></div>
             </div>                        
             <div class="epsdesc">
                 <h5>${ultepis[i].titulo}</h5>
@@ -391,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="epsic">
                 <img alt="${episdest[i].titulo} ${episdest[i].ep}" src="${episdest[i].img}">
                 <div class="epdur">${episdest[i].dur}</div>
-                <div class="pconly epshover" aria-hidden="true"></div>
+                <div class="epshover" aria-hidden="true"></div>
             </div>                        
             <div class="epsdesc">
                 <h5>${episdest[i].titulo}</h5>
@@ -467,13 +467,13 @@ document.addEventListener("DOMContentLoaded", function() {
         node.classList.add("poster");
         node.innerHTML = `
             <img alt="${startrek[i].titulo}" src="${startrek[i].img}">
-            <div class="posterbox pconly">
+            <div class="posterbox">
                 <div class="postertxt">
                     <h5>${startrek[i].titulo}</h5>
                     <div class="showinfo">
                         <h6>${startrek[i].ano}</h6><h6>${startrek[i].tamanho}</h6><div class="cetaria ce${startrek[i].idade}">${startrek[i].idade}</div>
                     </div>
-                    <p class="showdesc">${startrek[i].desc}</p>
+                    <p class="showdesc pconly">${startrek[i].desc}</p>
                 </div>
             </div>
             <a href="#nogo" class="linkfill"></a>
@@ -547,13 +547,13 @@ document.addEventListener("DOMContentLoaded", function() {
         node.classList.add("poster");
         node.innerHTML = `
             <img alt="${destfilmes[i].titulo}" src="${destfilmes[i].img}">
-            <div class="posterbox pconly">
+            <div class="posterbox">
                 <div class="postertxt">
                     <h5>${destfilmes[i].titulo}</h5>
                     <div class="showinfo">
                         <h6>${destfilmes[i].ano}</h6><h6>${destfilmes[i].tamanho}</h6><div class="cetaria ce${destfilmes[i].idade}">${destfilmes[i].idade}</div>
                     </div>
-                    <p class="showdesc">${destfilmes[i].desc}</p>
+                    <p class="showdesc pconly">${destfilmes[i].desc}</p>
                 </div>
             </div>
             <a href="#nogo" class="linkfill"></a>
