@@ -256,343 +256,152 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    for(let i=0; i<novseries.length; i++){
+    function createPoster(ccon,carr,cind){
         let node = document.createElement("article");
         node.classList.add("swiper-slide");
         node.classList.add("poster");
         node.innerHTML = `
-            <img alt="${novseries[i].titulo}" src="${novseries[i].img}">
+            <img alt="${carr[cind].titulo}" src="${carr[cind].img}">
             <div class="posterbox">
                 <div class="postertxt">
-                    <h5>${novseries[i].titulo}</h5>
+                    <h5>${carr[cind].titulo}</h5>
                     <div class="showinfo">
-                        <h6>${novseries[i].ano}</h6><h6>${novseries[i].tamanho}</h6><div class="cetaria ce${novseries[i].idade}">${novseries[i].idade}</div>
+                        <h6>${carr[cind].ano}</h6><h6>${carr[cind].tamanho}</h6><div class="cetaria ce${carr[cind].idade}">${carr[cind].idade}</div>
                     </div>
-                    <p class="showdesc pconly">${novseries[i].desc}</p>
+                    <p class="showdesc pconly">${carr[cind].desc}</p>
                 </div>
             </div>
             <a href="#nogo" class="linkfill"></a>
         `;
-        carcont[2].appendChild(node);
+        carcont[ccon].appendChild(node);
     };
 
-    new Swiper("#carnovserie", {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 14,
-        navigation: {
-            nextEl: ".ctrbtnr",
-            prevEl: ".ctrbtnl",
-            disabledClass: "hidden"
-        },
-        breakpoints: {
-            600: {
-                spaceBetween: 20,
-                slidesPerView: 4,
-                slidesPerGroup: 4
-            },
-            1280: {
-                slidesPerView: 5,
-                slidesPerGroup: 5
-            },
-            1600: {
-                slidesPerView: 6,
-                slidesPerGroup: 6
-            }
-        },
-        pagination: {
-            el: ".pagination",
-            type: "bullets",
-            bulletClass: "barra",
-            bulletActiveClass: "batv",
-            clickable: true,
-            hideOnClick: false
-        }
-    });
-
-    for(let i=0; i<novfilmes.length; i++){
-        let node = document.createElement("article");
-        node.classList.add("swiper-slide");
-        node.classList.add("poster");
-        node.innerHTML = `
-            <img alt="${novfilmes[i].titulo}" src="${novfilmes[i].img}">
-            <div class="posterbox">
-                <div class="postertxt">
-                    <h5>${novfilmes[i].titulo}</h5>
-                    <div class="showinfo">
-                        <h6>${novfilmes[i].ano}</h6><h6>${novfilmes[i].tamanho}</h6><div class="cetaria ce${novfilmes[i].idade}">${novfilmes[i].idade}</div>
-                    </div>
-                    <p class="showdesc pconly">${novfilmes[i].desc}</p>
-                </div>
-            </div>
-            <a href="#nogo" class="linkfill"></a>
-        `;
-        carcont[3].appendChild(node);
-    };
-
-    new Swiper("#carnovfilme", {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 14,
-        navigation: {
-            nextEl: ".ctrbtnr",
-            prevEl: ".ctrbtnl",
-            disabledClass: "hidden"
-        },
-        breakpoints: {
-            600: {
-                spaceBetween: 20,
-                slidesPerView: 4,
-                slidesPerGroup: 4
-            },
-            1280: {
-                slidesPerView: 5,
-                slidesPerGroup: 5
-            },
-            1600: {
-                slidesPerView: 6,
-                slidesPerGroup: 6
-            }
-        },
-        pagination: {
-            el: ".pagination",
-            type: "bullets",
-            bulletClass: "barra",
-            bulletActiveClass: "batv",
-            clickable: true,
-            hideOnClick: false
-        }
-    });
-
-    for(let i=0; i<ultepis.length; i++){
+    function createEpisode(ccon,carr,cind){
         let node = document.createElement("article");
         node.classList.add("swiper-slide");
         node.classList.add("episode");
         node.innerHTML = `
             <div class="epsic">
-                <img alt="${ultepis[i].titulo} ${ultepis[i].ep}" src="${ultepis[i].img}">
-                <div class="epdur">${ultepis[i].dur}</div>
+                <img alt="${carr[cind].titulo} ${carr[cind].ep}" src="${carr[cind].img}">
+                <div class="epdur">${carr[cind].dur}</div>
                 <div class="epshover" aria-hidden="true"></div>
             </div>                        
             <div class="epsdesc">
-                <h5>${ultepis[i].titulo}</h5>
-                <h6>${ultepis[i].ep}</h6>
+                <h5>${carr[cind].titulo}</h5>
+                <h6>${carr[cind].ep}</h6>
             </div>
             <a href="#nogo" class="linkfill"></a>
         `;
-        carcont[4].appendChild(node);
+        carcont[ccon].appendChild(node);
     };
 
-    for(let i=0; i<episdest.length; i++){
-        let node = document.createElement("article");
-        node.classList.add("swiper-slide");
-        node.classList.add("episode");
-        node.innerHTML = `
-            <div class="epsic">
-                <img alt="${episdest[i].titulo} ${episdest[i].ep}" src="${episdest[i].img}">
-                <div class="epdur">${episdest[i].dur}</div>
-                <div class="epshover" aria-hidden="true"></div>
-            </div>                        
-            <div class="epsdesc">
-                <h5>${episdest[i].titulo}</h5>
-                <h6>${episdest[i].ep}</h6>
-            </div>
-            <a href="#nogo" class="linkfill"></a>
-        `;
-        carcont[6].appendChild(node);
-    };
+    novseries.forEach((e,i)=>{createPoster(2,novseries,i)});
+    novfilmes.forEach((e,i)=>{createPoster(3,novfilmes,i)});
+    ultepis.forEach((e,i)=>{createEpisode(4,ultepis,i)});
+    startrek.forEach((e,i)=>{createPoster(5,startrek,i)});
+    episdest.forEach((e,i)=>{createEpisode(6,episdest,i)});
+    destfilmes.forEach((e,i)=>{createPoster(7,destfilmes,i)});
 
     const epsic = document.querySelectorAll(".epsic");
-    function createHover(tabela, n) {
+    function createHover(carr, n) {
         function chkepst(){
-            if(tabela[n].stat !== ""){
+            if(carr[n].stat !== ""){
                 return epstatus()
             }
         };
         function epstatus(){
             let edvst = document.createElement("div");
             edvst.classList.add("epstat")
-            if(tabela[n].stat == "Estreia" || tabela[n].stat == "Nova Temporada"){
+            if(carr[n].stat == "Estreia" || carr[n].stat == "Nova Temporada"){
                 edvst.classList.add("epstatvd");
-                edvst.textContent = tabela[n].stat
+                edvst.textContent = carr[n].stat
             }
-            else if(tabela[n].stat == "Fim de Série" || tabela[n].stat == "Fim de Temporada"){
+            else if(carr[n].stat == "Fim de Série" || carr[n].stat == "Fim de Temporada"){
                 edvst.classList.add("epstatvm");
-                edvst.textContent = tabela[n].stat
+                edvst.textContent = carr[n].stat
             }
             else {void(0)}
             epsic[n].appendChild(edvst)
         };
         chkepst();
     }
-    for(let i=0; i<ultepis.length; i++){
-        createHover(ultepis, i);
-    }
-    for(let i=0; i<episdest.length; i++){
-        createHover(episdest, i);
-    }
+
+    ultepis.forEach((e,i)=>{createHover(ultepis, i)});
+    episdest.forEach((e,i)=>{createHover(episdest, i)});
 
     const epshover = document.querySelectorAll(".epshover");
     epshover.forEach((e)=>{e.innerHTML=playico});
 
-    new Swiper("#carnoveps", {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 14,
-        navigation: {
-            nextEl: ".ctrbtnr",
-            prevEl: ".ctrbtnl",
-            disabledClass: "hidden"
-        },
-        breakpoints: {
-            600: {
-                spaceBetween: 20,
-                slidesPerView: 3,
-                slidesPerGroup: 3
+    function createSwiperPoster(container){
+        new Swiper(container, {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 14,
+            navigation: {
+                nextEl: ".ctrbtnr",
+                prevEl: ".ctrbtnl",
+                disabledClass: "hidden"
             },
-            1280: {
-                slidesPerView: 4,
-                slidesPerGroup: 4
+            breakpoints: {
+                600: {
+                    spaceBetween: 20,
+                    slidesPerView: 4,
+                    slidesPerGroup: 4
+                },
+                1280: {
+                    slidesPerView: 5,
+                    slidesPerGroup: 5
+                },
+                1600: {
+                    slidesPerView: 6,
+                    slidesPerGroup: 6
+                }
             },
-            1600: {
-                slidesPerView: 5,
-                slidesPerGroup: 5
+            pagination: {
+                el: ".pagination",
+                type: "bullets",
+                bulletClass: "barra",
+                bulletActiveClass: "batv",
+                clickable: true,
+                hideOnClick: false
             }
-        }
-    });
-
-    for(let i=0; i<startrek.length; i++){
-        let node = document.createElement("article");
-        node.classList.add("swiper-slide");
-        node.classList.add("poster");
-        node.innerHTML = `
-            <img alt="${startrek[i].titulo}" src="${startrek[i].img}">
-            <div class="posterbox">
-                <div class="postertxt">
-                    <h5>${startrek[i].titulo}</h5>
-                    <div class="showinfo">
-                        <h6>${startrek[i].ano}</h6><h6>${startrek[i].tamanho}</h6><div class="cetaria ce${startrek[i].idade}">${startrek[i].idade}</div>
-                    </div>
-                    <p class="showdesc pconly">${startrek[i].desc}</p>
-                </div>
-            </div>
-            <a href="#nogo" class="linkfill"></a>
-        `;
-        carcont[5].appendChild(node);
+        });
     };
 
-    new Swiper("#carstartrek", {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 14,
-        navigation: {
-            nextEl: ".ctrbtnr",
-            prevEl: ".ctrbtnl",
-            disabledClass: "hidden"
-        },
-        breakpoints: {
-            600: {
-                spaceBetween: 20,
-                slidesPerView: 4,
-                slidesPerGroup: 4
+    function createSwiperEpisode(container){
+        new Swiper(container, {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 14,
+            navigation: {
+                nextEl: ".ctrbtnr",
+                prevEl: ".ctrbtnl",
+                disabledClass: "hidden"
             },
-            1280: {
-                slidesPerView: 5,
-                slidesPerGroup: 5
-            },
-            1600: {
-                slidesPerView: 6,
-                slidesPerGroup: 6
+            breakpoints: {
+                600: {
+                    spaceBetween: 20,
+                    slidesPerView: 3,
+                    slidesPerGroup: 3
+                },
+                1280: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4
+                },
+                1600: {
+                    slidesPerView: 5,
+                    slidesPerGroup: 5
+                }
             }
-        },
-        pagination: {
-            el: ".pagination",
-            type: "bullets",
-            bulletClass: "barra",
-            bulletActiveClass: "batv",
-            clickable: true,
-            hideOnClick: false
-        }
-    });
+        });
+    }
 
-    new Swiper("#carepisdest", {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 14,
-        navigation: {
-            nextEl: ".ctrbtnr",
-            prevEl: ".ctrbtnl",
-            disabledClass: "hidden"
-        },
-        breakpoints: {
-            600: {
-                spaceBetween: 20,
-                slidesPerView: 3,
-                slidesPerGroup: 3
-            },
-            1280: {
-                slidesPerView: 4,
-                slidesPerGroup: 4
-            },
-            1600: {
-                slidesPerView: 5,
-                slidesPerGroup: 5
-            }
-        }
-    });
+    createSwiperPoster("#carnovserie");
+    createSwiperPoster("#carnovfilme");
+    createSwiperPoster("#carstartrek");
+    createSwiperPoster("#cardestfilme");
 
-    for(let i=0; i<destfilmes.length; i++){
-        let node = document.createElement("article");
-        node.classList.add("swiper-slide");
-        node.classList.add("poster");
-        node.innerHTML = `
-            <img alt="${destfilmes[i].titulo}" src="${destfilmes[i].img}">
-            <div class="posterbox">
-                <div class="postertxt">
-                    <h5>${destfilmes[i].titulo}</h5>
-                    <div class="showinfo">
-                        <h6>${destfilmes[i].ano}</h6><h6>${destfilmes[i].tamanho}</h6><div class="cetaria ce${destfilmes[i].idade}">${destfilmes[i].idade}</div>
-                    </div>
-                    <p class="showdesc pconly">${destfilmes[i].desc}</p>
-                </div>
-            </div>
-            <a href="#nogo" class="linkfill"></a>
-        `;
-        carcont[7].appendChild(node);
-    };
-
-    new Swiper("#cardestfilme", {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 14,
-        navigation: {
-            nextEl: ".ctrbtnr",
-            prevEl: ".ctrbtnl",
-            disabledClass: "hidden"
-        },
-        breakpoints: {
-            600: {
-                spaceBetween: 20,
-                slidesPerView: 4,
-                slidesPerGroup: 4
-            },
-            1280: {
-                slidesPerView: 5,
-                slidesPerGroup: 5
-            },
-            1600: {
-                slidesPerView: 6,
-                slidesPerGroup: 6
-            }
-        },
-        pagination: {
-            el: ".pagination",
-            type: "bullets",
-            bulletClass: "barra",
-            bulletActiveClass: "batv",
-            clickable: true,
-            hideOnClick: false
-        }
-    });
+    createSwiperEpisode("#carnoveps");
+    createSwiperEpisode("#carepisdest");
     /*7*/
 })
