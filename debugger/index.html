@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body style='min-height: 300vh'>
+The content of the body element is displayed in your browser.
+<div style='position: fixed; top: 40px; left: 50%; transform: translateX(-50%); font-size: 40px;'></div>
+</body>
+
+<script>
+function rsz() {
+document.querySelector('div').textContent = window.innerHeight;
+}
+rsz();
+window.addEventListener('resize', rsz);
+</script>
+</html>
