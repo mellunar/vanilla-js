@@ -1,1 +1,1 @@
-# https://mellunar.netlify.app
+# https://vanilla.mellunar.dev
