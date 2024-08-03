@@ -1,0 +1,11 @@
+:root {
+  --color-background: #100022;
+  --color-border: white;
+  --color-sweep: #00ffff;
+  --color-detail-border: #6b28a1;
+  --color-shadow: #6b28a1;
+  --detail-primary-color: #7500b8;
+  --detail-secondary-color: #dc0fcb;
+  --detail-tertiary-color: #ffb6c1;
+  --transparent: transparent;
+}

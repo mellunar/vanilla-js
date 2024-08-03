@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mel Lunar Streamlabs Theme</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="none, noarchive" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- external import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Chonburi&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- modules import -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <button id="menu-btn" class="bullet button" data-open="false">
+        open menu
+      </button>
+
+      <div id="commands">
+        <div class="command">
+          <input
+            class="input-text"
+            id="alert-box-input"
+            placeholder="username"
+            type="text"
+          />
+          <button id="alert-box-btn" class="bullet button">
+            trigger alert
+          </button>
+        </div>
+
+        <div class="command">
+          <select id="chat-box-role" class="input-select">
+            <option selected value="none">Role (none)</option>
+            <option value="owner">Broadcaster</option>
+            <option value="mod">Moderator</option>
+            <option value="sub">Subscriber</option>
+          </select>
+          <input
+            class="input-text"
+            id="chat-box-input"
+            placeholder="message"
+            type="text"
+          />
+          <button id="chat-box-btn" class="bullet button">add comment</button>
+        </div>
+      </div>
+
+      <div id="chatbox"></div>
+      <div id="goal"></div>
+
+      <iframe
+        class="video"
+        title=""
+        src="https://player.vimeo.com/video/992416450?muted=1&amp;autoplay=1&amp;loop=1&amp;background=1"
+        frameborder="0"
+        width="1280"
+        height="720"
+      ></iframe>
+    </main>
+  </body>
+  <script src="script/alertbox.js"></script>
+  <script src="script/chatbox.js"></script>
+  <script src="script/commands.js"></script>
+  <script src="script/goal.js"></script>
+</html>

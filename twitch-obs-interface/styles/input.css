@@ -1,0 +1,20 @@
+.input-text,
+.input-select {
+  background: var(--color-background);
+  border: 2px solid var(--detail-primary-color);
+  border-radius: 32px;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  outline: unset;
+  padding: 4px 16px;
+  position: relative;
+  width: 150px;
+  transition: border 150ms ease;
+}
+
+.input-text:focus,
+.input-select:focus {
+  border-color: var(--detail-secondary-color);
+}

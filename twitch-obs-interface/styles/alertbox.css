@@ -1,0 +1,183 @@
+.text {
+  font-family: 'Chonburi', serif;
+  font-size: 40px;
+  filter: drop-shadow(0 0 3px var(--color-shadow));
+  text-shadow: 0 0 1px var(--color-shadow);
+  max-width: 500px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  animation-name: text-fade;
+  animation-delay: 2s;
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.system {
+  animation-direction: reverse;
+  z-index: 2;
+}
+
+.system-fade {
+  animation-fill-mode: both;
+  animation-name: text-fade;
+  animation-duration: 200ms;
+}
+
+#alert-audio {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#alert-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.alert-message {
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.featured {
+  font-size: 28px;
+}
+
+.featured span {
+  color: var(--color-featured);
+}
+
+.quote::before {
+  content: '“ ';
+}
+
+.quote::after {
+  content: ' ”';
+}
+
+.circle {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--circle-radius);
+  height: var(--circle-radius);
+}
+
+.circle::after {
+  content: '';
+  border-radius: inherit;
+  display: block;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: -1;
+}
+
+#circle-outer {
+  --circle-radius: 975px;
+}
+
+#circle-outer::after {
+  border: 4px dotted var(--color-border);
+  animation-name: border-outer;
+  animation-duration: 60s;
+}
+
+#circle-inner {
+  --circle-radius: 600px;
+}
+
+#circle-inner::after {
+  border: 3px dotted var(--color-border);
+  animation-name: border-inner;
+  animation-duration: 30s;
+}
+
+#circle-middle {
+  --circle-radius: 775px;
+  border: 1px solid var(--color-border);
+}
+
+.circle-image {
+  display: block;
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#circle-outer .circle-image {
+  animation-name: orbit-outer;
+  animation-duration: 60s;
+  top: 46.5%;
+  left: 45%;
+}
+
+#circle-inner .circle-image {
+  animation-name: orbit-inner;
+  animation-duration: 30s;
+  top: 45.5%;
+  left: 43.5%;
+}
+
+@keyframes orbit-outer {
+  from {
+    transform: rotate(0deg) translateX(485px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(485px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-inner {
+  from {
+    transform: rotate(0deg) translateX(298px) rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg) translateX(298px) rotate(360deg);
+  }
+}
+
+@keyframes border-outer {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes border-inner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes text-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

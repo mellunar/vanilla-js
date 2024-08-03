@@ -1,0 +1,124 @@
+#goal {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  padding: 20px 40px;
+  animation: goal-fade-in linear 300ms;
+}
+
+.goal-full-width {
+  width: 100%;
+}
+
+.goal-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#goal-target {
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+}
+
+#goal-bar-outer {
+  background: var(--color-detail-border);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: var(--thickness);
+}
+
+#goal-bar-inner {
+  background: linear-gradient(to bottom, #2e0f49, #341255);
+  display: block;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  position: relative;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+#goal-current {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0px 0px 3px #6b28a1;
+}
+
+#goal-bar {
+  background: linear-gradient(to bottom, #c75afb, #9a41f0);
+  display: block;
+  height: 100%;
+}
+
+.goal-info {
+  font-weight: 600;
+  gap: 12px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.goal-decorator {
+  display: block;
+  width: 20px;
+}
+
+.goal-decorator:nth-of-type(2) {
+  transform: scale(-1);
+}
+
+.goal-shadow {
+  filter: drop-shadow(0 0 3px #6b28a1);
+  text-shadow: 0 0 1px #6b28a1;
+}
+
+.goal-light-sweep {
+  background: linear-gradient(
+    to right,
+    var(--transparent),
+    var(--color-sweep),
+    var(--transparent)
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  height: calc(var(--thickness) * 10 / 2);
+  width: calc(var(--thickness) * 10 / 2);
+  position: absolute;
+  top: 50%;
+  transform: rotate(30deg) translate(0, -50%);
+  animation-name: goal-light-sweep-anim;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  /*animation-timing-function: ease;*/
+}
+
+@keyframes goal-light-sweep-anim {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 120%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes goal-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
