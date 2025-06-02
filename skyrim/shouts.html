@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background: #0e0d12;
+      color: white;
+      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    }
+
+    thead {
+      background: #16141c;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 0.5rem 0.625rem 0.625rem;
+    }
+
+    tr:nth-of-type(2n) {
+      background: #16141c;
+    }
+    
+    td div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    input[type="checkbox"] {
+      appearance: none;
+      background-color: #fff;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      width: 1.15em;
+      height: 1.15em;
+      border: 0.15em solid currentColor;
+      border-radius: 0.15em;
+      transform: translateY(-0.075em);
+      display: grid;
+      place-content: center;
+    }
+
+    input[type="checkbox"]::before {
+      content: "";
+      width: 0.75em;
+      height: 0.75em;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em #6d4aff;
+    }
+
+    input[type="checkbox"]:checked::before {
+      transform: scale(1);
+    }
+  </style>
+  <body>
+    <table id='shoutsTable'>
+      <thead>
+        <tr>
+          <th>Dragon Shout</th>
+          <th>Word 1</th>
+          <th>Word 2</th>
+          <th>Word 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Animal Allegiance</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Animal1" id="Animal1" />
+              <label for="Animal1"> Animal</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Allegiance2" id="Allegiance2" />
+              <label for="Allegiance2"> Allegiance</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Pack3" id="Pack3" />
+              <label for="Pack3"> Pack</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Aura Whisper</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Life4" id="Life4" />
+              <label for="Life4"> Life</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Seek5" id="Seek5" />
+              <label for="Seek5"> Seek</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Hunt6" id="Hunt6" />
+              <label for="Hunt6"> Hunt</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Battle Fury (DB)</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Loyal7" id="Loyal7" />
+              <label for="Loyal7"> Loyal</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Valor8" id="Valor8" />
+              <label for="Valor8"> Valor</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Inspire9" id="Inspire9" />
+              <label for="Inspire9"> Inspire</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Become Ethereal</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Fade10" id="Fade10" />
+              <label for="Fade10"> Fade</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Spirit11" id="Spirit11" />
+              <label for="Spirit11"> Spirit</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Bind12" id="Bind12" />
+              <label for="Bind12"> Bind</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bend Will (DB)</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Earth13" id="Earth13" />
+              <label for="Earth13"> Earth</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Mind14" id="Mind14" />
+              <label for="Mind14"> Mind</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Dragon15" id="Dragon15" />
+              <label for="Dragon15"> Dragon</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Call Dragon</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Snow16" id="Snow16" />
+              <label for="Snow16"> Snow</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Hunter17" id="Hunter17" />
+              <label for="Hunter17"> Hunter</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Wing18" id="Wing18" />
+              <label for="Wing18"> Wing</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Call Of Valor</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Hero19" id="Hero19" />
+              <label for="Hero19"> Hero</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Champion20" id="Champion20" />
+              <label for="Champion20"> Champion</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Legend21" id="Legend21" />
+              <label for="Legend21"> Legend</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Clear Skies</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Sky22" id="Sky22" />
+              <label for="Sky22"> Sky</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Spring23" id="Spring23" />
+              <label for="Spring23"> Spring</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Summer24" id="Summer24" />
+              <label for="Summer24"> Summer</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Cyclone (DB)</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Wind25" id="Wind25" />
+              <label for="Wind25"> Wind</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Unleash26" id="Unleash26" />
+              <label for="Unleash26"> Unleash</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Strike27" id="Strike27" />
+              <label for="Strike27"> Strike</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Disarm</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Weapon28" id="Weapon28" />
+              <label for="Weapon28"> Weapon</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Hand29" id="Hand29" />
+              <label for="Hand29"> Hand</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Defeat30" id="Defeat30" />
+              <label for="Defeat30"> Defeat</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Dismay</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Fear31" id="Fear31" />
+              <label for="Fear31"> Fear</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Run32" id="Run32" />
+              <label for="Run32"> Run</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Terror33" id="Terror33" />
+              <label for="Terror33"> Terror</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Dragon Aspect (DB)</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Strength34" id="Strength34" />
+              <label for="Strength34"> Strength</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Armor35" id="Armor35" />
+              <label for="Armor35"> Armor</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Wyrm36" id="Wyrm36" />
+              <label for="Wyrm36"> Wyrm</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Dragonrend</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Mortal37" id="Mortal37" />
+              <label for="Mortal37"> Mortal</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Finite38" id="Finite38" />
+              <label for="Finite38"> Finite</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Temporary39" id="Temporary39" />
+              <label for="Temporary39"> Temporary</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Drain Vitality (DG)</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Stamina40" id="Stamina40" />
+              <label for="Stamina40"> Stamina</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Magicka41" id="Magicka41" />
+              <label for="Magicka41"> Magicka</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Health42" id="Health42" />
+              <label for="Health42"> Health</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Elemental Fury</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Air43" id="Air43" />
+              <label for="Air43"> Air</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Battle44" id="Battle44" />
+              <label for="Battle44"> Battle</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Grace45" id="Grace45" />
+              <label for="Grace45"> Grace</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Fire Breath</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Fire46" id="Fire46" />
+              <label for="Fire46"> Fire</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Inferno47" id="Inferno47" />
+              <label for="Inferno47"> Inferno</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Sun48" id="Sun48" />
+              <label for="Sun48"> Sun</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Frost Breath</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Frost49" id="Frost49" />
+              <label for="Frost49"> Frost</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Cold50" id="Cold50" />
+              <label for="Cold50"> Cold</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Freeze51" id="Freeze51" />
+              <label for="Freeze51"> Freeze</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Ice Form</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Ice52" id="Ice52" />
+              <label for="Ice52"> Ice</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Flesh53" id="Flesh53" />
+              <label for="Flesh53"> Flesh</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Statue54" id="Statue54" />
+              <label for="Statue54"> Statue</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Kyne's Peace</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Kyne55" id="Kyne55" />
+              <label for="Kyne55"> Kyne</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Peace56" id="Peace56" />
+              <label for="Peace56"> Peace</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Trust57" id="Trust57" />
+              <label for="Trust57"> Trust</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Marked for Death</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Kill58" id="Kill58" />
+              <label for="Kill58"> Kill</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Leech59" id="Leech59" />
+              <label for="Leech59"> Leech</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Suffer60" id="Suffer60" />
+              <label for="Suffer60"> Suffer</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Soul Tear (DG)</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Essence61" id="Essence61" />
+              <label for="Essence61"> Essence</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Tear62" id="Tear62" />
+              <label for="Tear62"> Tear</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Zombie63" id="Zombie63" />
+              <label for="Zombie63"> Zombie</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Slow Time</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Time64" id="Time64" />
+              <label for="Time64"> Time</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Sand65" id="Sand65" />
+              <label for="Sand65"> Sand</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Eternity66" id="Eternity66" />
+              <label for="Eternity66"> Eternity</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Storm Call</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Storm67" id="Storm67" />
+              <label for="Storm67"> Storm</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Wrath68" id="Wrath68" />
+              <label for="Wrath68"> Wrath</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Lightning69" id="Lightning69" />
+              <label for="Lightning69"> Lightning</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Summon Durhnehviir (DG)</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Curse70" id="Curse70" />
+              <label for="Curse70"> Curse</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Never71" id="Never71" />
+              <label for="Never71"> Never</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Dying72" id="Dying72" />
+              <label for="Dying72"> Dying</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Throw Voice</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Voice73" id="Voice73" />
+              <label for="Voice73"> Voice</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Fool74" id="Fool74" />
+              <label for="Fool74"> Fool</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Far75" id="Far75" />
+              <label for="Far75"> Far</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Unrelenting Force</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Force76" id="Force76" />
+              <label for="Force76"> Force</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Balance77" id="Balance77" />
+              <label for="Balance77"> Balance</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Push78" id="Push78" />
+              <label for="Push78"> Push</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Whirlwind Sprint</td>
+          <td>
+            <div>
+              <input type="checkbox" name="Whirlwind79" id="Whirlwind79" />
+              <label for="Whirlwind79"> Whirlwind</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Fury80" id="Fury80" />
+              <label for="Fury80"> Fury</label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <input type="checkbox" name="Tempest81" id="Tempest81" />
+              <label for="Tempest81"> Tempest</label>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+
+  <script>
+    const inputs = document.querySelectorAll("input");
+    let store = getStore();
+
+    if (!store) {
+      localStorage.setItem("shouts", "[]");
+      store = getStore();
+    } else {
+      const storage = JSON.parse(store);
+      storage.forEach((id) => {
+        document.getElementById(id).checked = true;
+      });
+    }
+
+    document.getElementById('shoutsTable').addEventListener("change", (e) => storeToggle(e.target.id));
+
+    function getStore() {
+      return localStorage.getItem("shouts");
+    }
+
+    function setStore(value) {
+      value = JSON.stringify(value);
+      localStorage.setItem("shouts", value);
+      store = getStore();
+    }
+
+    function storeToggle(id) {
+      const storage = JSON.parse(store);
+
+      if (!storage.includes(id)) {
+        storage.push(id);
+        setStore(storage);
+        return;
+      }
+
+      const index = storage.indexOf(id);
+
+      if (index > -1) {
+        storage.splice(index, 1);
+        setStore(storage);
+      }
+    }
+  </script>
+</html>
